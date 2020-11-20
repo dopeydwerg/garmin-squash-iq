@@ -1,0 +1,5 @@
+<resources>
+  <properties>
+    <property id="opponent_name" type="string">Opp</property>
+  </properties>
+</resources>

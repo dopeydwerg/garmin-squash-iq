@@ -1,0 +1,14 @@
+<strings>
+    <string id="application_name">Squash It!</string>
+    <string id="next_opponent_label">Next Player</string>
+    <string id="press_start_label">Press Start</string>
+    <string id="press_continue_label">Press continue</string>
+
+    <!--settings-->
+    <string id="settings_opponent_name_title">Oppenent Name</string>
+
+    <string id="prompt">Click the menu button</string>
+
+    <string id="menu_label_1">Item 1</string>
+    <string id="menu_label_2">Item 2</string>
+</strings>

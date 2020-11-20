@@ -1,0 +1,7 @@
+<resources>
+  <settings>
+    <setting propertyKey="@Properties.opponent_name" title="@Strings.settings_opponent_name_title">
+      <settingConfig type="alphaNumeric" required="true" />
+    </setting>
+  </settings>
+</resources>
