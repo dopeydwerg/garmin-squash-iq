@@ -1,9 +1,9 @@
 <layout id="MainLayout">
-    <drawable id="screenDivider" />
-    <button x="center" y="center" width="50" height="50" background="Graphics.COLOR_WHITE" behavior="onRelax">
-        <state id="stateDefault" color="Graphics.COLOR_WHITE" />
-        <state id="stateHighlighted" color="Graphics.COLOR_PURPLE" />
-        <state id="stateSelected" color="Graphics.COLOR_YELLOW" />
-        <state id="stateDisabled" color="Graphics.COLOR_BLACK" />
-    </button>
+  <drawable id="screenDivider" />
+  <text-area id="BlockOfText" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." x="33%" y="66%" width="33%" height="33%" color="Gfx.COLOR_DK_BLUE" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER">
+    <fonts>
+      <font>Gfx.FONT_TINY</font>
+      <font>Gfx.FONT_XTINY</font>
+    </fonts>
+  </text-area>
 </layout>

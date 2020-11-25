@@ -1,14 +1,51 @@
 <strings>
-    <string id="application_name">Squash It!</string>
-    <string id="next_opponent_label">Next Player</string>
-    <string id="press_start_label">Press Start</string>
-    <string id="press_continue_label">Press continue</string>
+  <string id="application_name">Squash It!</string>
+  <string id="next_opponent_label">Next Player</string>
+  <string id="press_start_label">Press Start</string>
+  <string id="press_continue_label">Press continue</string>
 
-    <!--settings-->
-    <string id="settings_opponent_name_title">Oppenent Name</string>
+  <!--settings-->
+  <string id="settings_opponent_name_title">Oppenent Name</string>
+  <string id="settings_match_type">Match Type</string>
+  <string id="settings_maximum_number_of_games">Games to play</string>
 
-    <string id="prompt">Click the menu button</string>
+  <string id="Friendly">Friendly</string>
+  <string id="Competition">Competition</string>
 
-    <string id="menu_label_1">Item 1</string>
-    <string id="menu_label_2">Item 2</string>
+  <string id="game_end_you_label">You</string>
+  <string id="game_end_opponent_label">Opp</string>
+  <string id="game_end_finish_match">Finish</string>
+  <string id="game_end_you_won">Game won!</string>
+  <string id="game_end_opponent_won">Game lost!</string>
+  <string id="game_end_rallies">${rallies} rallies</string>
+  <string id="game_end_elpased">${elapsed_time} game time</string>
+  <string id="game_end_what_next">Next server or finish!</string>
+
+  <string id="end_you_won">You won!</string>
+  <string id="end_opponent_won">${opponent} won!</string>
+  <string id="end_total_rallies">${rallies} total rallies</string>
+  <string id="end_save_garmin_connect">Save match?</string>
+
+  <string id="prompt">Click the menu button</string>
+
+  <string id="stats_title">Statistics</string>
+  <string id="stats_average_heart_rate">Average HR ${average_heart_rate}bpm</string>
+  <string id="stats_max_heart_rate">Max HR ${max_heart_rate}bpm</string>
+  <string id="stats_meters">Ran ${meters}meters</string>
+  <string id="stats_calories">Burnt ${calories}kcal</string>
+  <string id="stats_no_stats">Nothing to display</string>
+
+  <string id="fit_activity_name">Squash</string>
+  <string id="fit_game_number">Game</string>
+  <string id="fit_game_unit_label">Game</string>
+  <string id="fit_score_unit_label">points</string>
+  <string id="fit_game_score_player_1_label">Your score for the game</string>
+  <string id="fit_game_score_player_2_label">Opponent score for the game</string>
+  <string id="fit_calories_burned_label">Calories burned</string>
+  <string id="fit_calories_unit">Cals</string>
+  <string id="fit_steps_taken_label">Total steps</string>
+  <string id="fit_steps_unit">Steps</string>
+
+  <string id="menu_label_1">Item 1</string>
+  <string id="menu_label_2">Item 2</string>
 </strings>

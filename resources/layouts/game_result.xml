@@ -1,0 +1,28 @@
+<layout id="game_result">
+  <label id="game_result_won_text" x="center" y="10%" font="Gfx.FONT_LARGE" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <label id="game_result_score" x="center" y="22%" font="Gfx.FONT_LARGE" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <label id="game_result_rallies" x="center" y="35%" font="Gfx.FONT_SMALL" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <label id="game_result_lapsed_time" x="center" y="45%" font="Gfx.FONT_SMALL" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <label id="game_result_what_next" x="center" y="65%" font="Gfx.FONT_XTINY" color="Gfx.COLOR_WHITE" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <button x="0%" y="75%" width="35%" height="25%" background="Graphics.COLOR_WHITE" behavior="onYouServing">
+    <state id="stateDefault" color="Graphics.COLOR_WHITE" />
+    <state id="stateHighlighted" color="Graphics.COLOR_PURPLE" />
+    <state id="stateSelected" color="Graphics.COLOR_YELLOW" />
+    <state id="stateDisabled" color="Graphics.COLOR_BLACK" />
+  </button>
+  <label id="game_result_next_server_you" x="25%" y="75%" font="Gfx.FONT_SMALL" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <button x="37%" y="75%" width="26%" height="25%" background="Graphics.COLOR_WHITE" behavior="onFinish">
+    <state id="stateDefault" color="Graphics.COLOR_WHITE" />
+    <state id="stateHighlighted" color="Graphics.COLOR_PURPLE" />
+    <state id="stateSelected" color="Graphics.COLOR_YELLOW" />
+    <state id="stateDisabled" color="Graphics.COLOR_BLACK" />
+  </button>
+  <label id="game_result_finish_match" x="50%" y="75%" font="Gfx.FONT_SMALL" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+  <button x="65%" y="75%" width="35%" height="25%" background="Graphics.COLOR_WHITE" behavior="onOpponentServing">
+    <state id="stateDefault" color="Graphics.COLOR_WHITE" />
+    <state id="stateHighlighted" color="Graphics.COLOR_PURPLE" />
+    <state id="stateSelected" color="Graphics.COLOR_YELLOW" />
+    <state id="stateDisabled" color="Graphics.COLOR_BLACK" />
+  </button>
+  <label id="game_result_next_server_opponent" x="75%" y="75%" font="Gfx.FONT_SMALL" color="Gfx.COLOR_BLACK" justification="Gfx.TEXT_JUSTIFY_CENTER" />
+</layout>

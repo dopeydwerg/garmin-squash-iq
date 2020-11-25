@@ -82,11 +82,6 @@ class InitialView extends Ui.View {
 class InitialViewDelegate extends Ui.BehaviorDelegate {
   function initialize(view) { BehaviorDelegate.initialize(); }
 
-  function vibrate(duration){
-		var vibrateData = [ new Attention.VibeProfile(  100, duration ) ];
-		Attention.vibrate( vibrateData );
-	}
-
   function onBack() {
     // pop the main view to close the application
     Sys.println("We're definitely not doing this right now");
@@ -103,8 +98,9 @@ class InitialViewDelegate extends Ui.BehaviorDelegate {
   function onKey(keyEvent) {
     if (keyEvent.getKey() == KEY_ENTER) {
       Sys.println("Starting the game!!");
-      vibrate(1500);
-      $.match = new Match();
+      $.bus.dispatch(new BusEvent(:vibrate, 500));
+      var num_games = App.getApp().getProperty("games_to_play");
+      $.match = new Match(num_games, :player_1);
       var matchView = new MatchView();
       Ui.switchToView(matchView, new MatchViewDelegate(matchView), Ui.SLIDE_IMMEDIATE);
     } else {
