@@ -2,363 +2,532 @@
 <debugInfo>
     <manifest filename="C:\Users\cor.vandoorn\GarminDevlopment\SquashIt\manifest.xml"/>
     <pcToLineNum>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\match.mc" id="3" lineNum="4" pc="268435456" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\match.mc" id="3" lineNum="5" pc="268435460" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\match.mc" id="4" lineNum="8" pc="268435471" symbol="isInProgress"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\match.mc" id="4" lineNum="9" pc="268435475" symbol="isInProgress"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="6" lineNum="16" pc="268435485" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="6" lineNum="17" pc="268435489" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="6" lineNum="19" pc="268435507" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="6" lineNum="20" pc="268435541" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="6" lineNum="22" pc="268435564" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="7" lineNum="25" pc="268435593" symbol="onLayout"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="7" lineNum="26" pc="268435597" symbol="onLayout"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="8" lineNum="29" pc="268435635" symbol="testJe"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="8" lineNum="30" pc="268435639" symbol="testJe"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="9" lineNum="33" pc="268435664" symbol="getBoundaries"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="9" lineNum="34" pc="268435668" symbol="getBoundaries"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="9" lineNum="40" pc="268435779" symbol="getBoundaries"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="9" lineNum="47" pc="268435903" symbol="getBoundaries"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="53" pc="268435931" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="54" pc="268435935" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="55" pc="268435971" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="57" pc="268435983" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="58" pc="268436019" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="61" pc="268436033" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="62" pc="268436069" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="65" pc="268436158" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="10" lineNum="66" pc="268436194" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="12" lineNum="73" pc="268436303" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="12" lineNum="74" pc="268436307" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="12" lineNum="75" pc="268436317" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="13" lineNum="78" pc="268436336" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="13" lineNum="79" pc="268436340" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="13" lineNum="80" pc="268436364" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="13" lineNum="82" pc="268436418" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="85" pc="268436422" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="86" pc="268436426" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="87" pc="268436436" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="88" pc="268436446" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="89" pc="268436474" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="90" pc="268436502" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="91" pc="268436567" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="92" pc="268436591" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="93" pc="268436656" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="14" lineNum="95" pc="268436680" symbol="whichButtonWasPressed"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="15" lineNum="99" pc="268436702" symbol="onTap"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="15" lineNum="100" pc="268436706" symbol="onTap"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="16" lineNum="103" pc="268436730" symbol="onRelax"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="16" lineNum="104" pc="268436734" symbol="onRelax"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="16" lineNum="105" pc="268436755" symbol="onRelax"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="18" lineNum="12" pc="268436779" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="18" lineNum="12" pc="268436783" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="19" lineNum="15" pc="268436802" symbol="onStart"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="20" lineNum="18" pc="268436807" symbol="onStop"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="21" lineNum="21" pc="268436812" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="21" lineNum="22" pc="268436816" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="21" lineNum="23" pc="268436840" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="21" lineNum="9" pc="268440225" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="23" lineNum="6" pc="268436890" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="23" lineNum="7" pc="268436894" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="24" lineNum="10" pc="268436913" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="24" lineNum="11" pc="268436917" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="24" lineNum="12" pc="268436928" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="24" lineNum="13" pc="268436952" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="24" lineNum="14" pc="268436963" symbol="onMenuItem"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="26" lineNum="4" pc="268436988" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="26" lineNum="4" pc="268436992" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="27" lineNum="6" pc="268437011" symbol="onMenu"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="27" lineNum="7" pc="268437015" symbol="onMenu"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="27" lineNum="9" pc="268437099" symbol="onMenu"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="28" lineNum="12" pc="268437103" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="28" lineNum="12" pc="268437107" symbol="onNextPage"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="29" lineNum="14" pc="268437131" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="29" lineNum="14" pc="268437135" symbol="onPreviousPage"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="30" lineNum="16" pc="268437159" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="30" lineNum="17" pc="268437163" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="30" lineNum="18" pc="268437186" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="31" lineNum="21" pc="268437190" symbol="onStart"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="31" lineNum="22" pc="268437194" symbol="onStart"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="32" lineNum="25" pc="268437215" symbol="onRelax"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="32" lineNum="26" pc="268437219" symbol="onRelax"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="34" lineNum="5" pc="268437243" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="34" lineNum="6" pc="268437247" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="35" lineNum="10" pc="268437266" symbol="onLayout"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="35" lineNum="11" pc="268437270" symbol="onLayout"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="36" lineNum="17" pc="268437308" symbol="onShow"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="37" lineNum="21" pc="268437313" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="37" lineNum="22" pc="268437317" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="37" lineNum="23" pc="268437353" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="37" lineNum="25" pc="268437367" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="38" lineNum="31" pc="268437388" symbol="onHide"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="40" lineNum="16" pc="268437393" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="40" lineNum="16" pc="268437397" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="41" lineNum="18" pc="268437416" symbol="onShow"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="41" lineNum="19" pc="268437420" symbol="onShow"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="41" lineNum="21" pc="268437441" symbol="onShow"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="42" lineNum="24" pc="268437483" symbol="onHide"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="42" lineNum="25" pc="268437487" symbol="onHide"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="42" lineNum="26" pc="268437508" symbol="onHide"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="42" lineNum="27" pc="268437526" symbol="onHide"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="30" pc="268437540" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="31" pc="268437544" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="32" pc="268437563" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="33" pc="268437576" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="34" pc="268437583" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="35" pc="268437583" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="36" pc="268437602" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="39" pc="268437632" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="43" lineNum="40" pc="268437677" symbol="refresh"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="45" pc="268437694" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="46" pc="268437698" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="47" pc="268437711" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="48" pc="268437724" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="49" pc="268437751" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="50" pc="268437765" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="52" pc="268437791" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="55" pc="268437817" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="56" pc="268437853" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="57" pc="268437885" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="58" pc="268437923" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="59" pc="268437959" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="60" pc="268437996" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="62" pc="268438062" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="63" pc="268438079" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="65" pc="268438125" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="67" pc="268438168" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="70" pc="268438249" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="73" pc="268438320" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="76" pc="268438419" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="44" lineNum="12" pc="268440316" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="46" lineNum="83" pc="268438501" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="46" lineNum="83" pc="268438505" symbol="initialize"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="47" lineNum="85" pc="268438524" symbol="vibrate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="47" lineNum="86" pc="268438528" symbol="vibrate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="47" lineNum="87" pc="268438577" symbol="vibrate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="48" lineNum="90" pc="268438596" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="48" lineNum="92" pc="268438600" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="48" lineNum="93" pc="268438621" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="48" lineNum="94" pc="268438637" symbol="onBack"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="49" lineNum="97" pc="268438641" symbol="onTap"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="49" lineNum="98" pc="268438645" symbol="onTap"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="49" lineNum="99" pc="268438671" symbol="onTap"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="49" lineNum="100" pc="268438689" symbol="onTap"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="103" pc="268438717" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="104" pc="268438721" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="105" pc="268438744" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="106" pc="268438765" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="107" pc="268438782" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="108" pc="268438816" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="109" pc="268438840" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="50" lineNum="111" pc="268438897" symbol="onKey"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="51" lineNum="115" pc="268438919" symbol="onEnter"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="51" lineNum="115" pc="268438923" symbol="onEnter"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="52" lineNum="117" pc="268438945" symbol="onStart"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="52" lineNum="117" pc="268438949" symbol="onStart"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="53" lineNum="119" pc="268438971" symbol="onMenu"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="53" lineNum="119" pc="268438975" symbol="onMenu"/>
-        <entry filename="Rez" id="57" lineNum="11" pc="268438997" symbol="initialize"/>
-        <entry filename="Rez" id="57" lineNum="12" pc="268439001" symbol="initialize"/>
-        <entry filename="Rez" id="58" lineNum="15" pc="268439026" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="16" pc="268439030" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="17" pc="268439043" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="20" pc="268439056" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="21" pc="268439092" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="23" pc="268439160" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="24" pc="268439196" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="26" pc="268439264" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="27" pc="268439300" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="29" pc="268439368" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="30" pc="268439404" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="32" pc="268439472" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="33" pc="268439508" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="35" pc="268439597" symbol="draw"/>
-        <entry filename="Rez" id="58" lineNum="36" pc="268439633" symbol="draw"/>
-        <entry filename="Rez" id="62" lineNum="53" pc="268439723" symbol="MainLayout"/>
-        <entry filename="Rez" id="62" lineNum="56" pc="268439735" symbol="MainLayout"/>
-        <entry filename="Rez" id="62" lineNum="57" pc="268439775" symbol="MainLayout"/>
-        <entry filename="Rez" id="62" lineNum="58" pc="268439788" symbol="MainLayout"/>
-        <entry filename="Rez" id="62" lineNum="60" pc="268439804" symbol="MainLayout"/>
-        <entry filename="Rez" id="62" lineNum="62" pc="268440039" symbol="MainLayout"/>
-        <entry filename="Rez" id="65" lineNum="75" pc="268440067" symbol="initialize"/>
-        <entry filename="Rez" id="65" lineNum="76" pc="268440071" symbol="initialize"/>
-        <entry filename="Rez" id="65" lineNum="77" pc="268440089" symbol="initialize"/>
-        <entry filename="Rez" id="65" lineNum="78" pc="268440145" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="3" lineNum="7" pc="268435456" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="3" lineNum="8" pc="268435460" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="3" lineNum="9" pc="268435477" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="4" lineNum="12" pc="268435491" symbol="size"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="4" lineNum="13" pc="268435495" symbol="size"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="5" lineNum="16" pc="268435505" symbol="isEmpty"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="5" lineNum="17" pc="268435509" symbol="isEmpty"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="6" lineNum="20" pc="268435525" symbol="get"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="6" lineNum="21" pc="268435529" symbol="get"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="6" lineNum="22" pc="268435543" symbol="get"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="6" lineNum="24" pc="268435610" symbol="get"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="7" lineNum="27" pc="268435623" symbol="indexOf"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="7" lineNum="28" pc="268435627" symbol="indexOf"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="8" lineNum="31" pc="268435648" symbol="remove"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="8" lineNum="32" pc="268435652" symbol="remove"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="8" lineNum="33" pc="268435671" symbol="remove"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="9" lineNum="36" pc="268435692" symbol="push"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="9" lineNum="37" pc="268435696" symbol="push"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="9" lineNum="38" pc="268435731" symbol="push"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="9" lineNum="40" pc="268435746" symbol="push"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="9" lineNum="41" pc="268435765" symbol="push"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="10" lineNum="44" pc="268435785" symbol="pop"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="10" lineNum="45" pc="268435789" symbol="pop"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="10" lineNum="46" pc="268435808" symbol="pop"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="11" lineNum="49" pc="268435827" symbol="first"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="11" lineNum="50" pc="268435831" symbol="first"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="12" lineNum="53" pc="268435868" symbol="last"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="12" lineNum="54" pc="268435872" symbol="last"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="13" lineNum="57" pc="268435918" symbol="grow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="13" lineNum="58" pc="268435922" symbol="grow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="13" lineNum="59" pc="268435951" symbol="grow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="13" lineNum="60" pc="268435972" symbol="grow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="13" lineNum="62" pc="268436001" symbol="grow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="15" lineNum="16" pc="268436012" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="15" lineNum="17" pc="268436016" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="15" lineNum="20" pc="268436026" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="15" lineNum="21" pc="268436037" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="15" lineNum="22" pc="268436075" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="15" lineNum="23" pc="268436090" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="16" lineNum="27" pc="268436120" symbol="isInProgress"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="16" lineNum="28" pc="268436124" symbol="isInProgress"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="17" lineNum="31" pc="268436134" symbol="getSetsNumber"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="17" lineNum="32" pc="268436138" symbol="getSetsNumber"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="18" lineNum="35" pc="268436157" symbol="getCurrentSetIndex"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="18" lineNum="36" pc="268436161" symbol="getCurrentSetIndex"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="18" lineNum="37" pc="268436168" symbol="getCurrentSetIndex"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="18" lineNum="38" pc="268436214" symbol="getCurrentSetIndex"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="18" lineNum="40" pc="268436227" symbol="getCurrentSetIndex"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="19" lineNum="43" pc="268436237" symbol="getCurrentSet"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="19" lineNum="44" pc="268436241" symbol="getCurrentSet"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="20" lineNum="47" pc="268436263" symbol="scorePlayer"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="20" lineNum="48" pc="268436267" symbol="scorePlayer"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="20" lineNum="49" pc="268436282" symbol="scorePlayer"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="20" lineNum="50" pc="268436295" symbol="scorePlayer"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="20" lineNum="51" pc="268436317" symbol="scorePlayer"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="21" lineNum="55" pc="268436335" symbol="hasEnded"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\Match.mc" id="21" lineNum="56" pc="268436339" symbol="hasEnded"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="23" lineNum="16" pc="268436343" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="23" lineNum="17" pc="268436347" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="23" lineNum="19" pc="268436365" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="23" lineNum="20" pc="268436399" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="23" lineNum="22" pc="268436422" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="24" lineNum="25" pc="268436451" symbol="onLayout"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="24" lineNum="26" pc="268436455" symbol="onLayout"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="25" lineNum="29" pc="268436493" symbol="testJe"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="25" lineNum="30" pc="268436497" symbol="testJe"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="26" lineNum="33" pc="268436522" symbol="getBoundaries"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="26" lineNum="34" pc="268436526" symbol="getBoundaries"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="26" lineNum="40" pc="268436637" symbol="getBoundaries"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="26" lineNum="47" pc="268436761" symbol="getBoundaries"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="53" pc="268436789" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="54" pc="268436793" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="55" pc="268436829" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="57" pc="268436841" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="58" pc="268436877" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="61" pc="268436891" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="62" pc="268436927" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="65" pc="268437016" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="27" lineNum="66" pc="268437052" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="29" lineNum="73" pc="268437161" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="29" lineNum="74" pc="268437165" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="29" lineNum="75" pc="268437175" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="30" lineNum="78" pc="268437194" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="30" lineNum="79" pc="268437198" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="30" lineNum="80" pc="268437222" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="30" lineNum="82" pc="268437276" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="85" pc="268437280" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="86" pc="268437284" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="87" pc="268437294" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="88" pc="268437304" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="89" pc="268437332" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="90" pc="268437360" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="91" pc="268437425" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="92" pc="268437449" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="93" pc="268437514" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="31" lineNum="95" pc="268437538" symbol="whichButtonWasPressed"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="32" lineNum="99" pc="268437560" symbol="onTap"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="32" lineNum="100" pc="268437564" symbol="onTap"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="33" lineNum="103" pc="268437588" symbol="onRelax"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="33" lineNum="104" pc="268437592" symbol="onRelax"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="33" lineNum="105" pc="268437613" symbol="onRelax"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="35" lineNum="12" pc="268437637" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="35" lineNum="12" pc="268437641" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="36" lineNum="15" pc="268437660" symbol="onStart"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="37" lineNum="18" pc="268437665" symbol="onStop"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="38" lineNum="21" pc="268437670" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="38" lineNum="22" pc="268437674" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="38" lineNum="23" pc="268437698" symbol="getInitialView"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="38" lineNum="9" pc="268441255" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="40" lineNum="6" pc="268437748" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="40" lineNum="7" pc="268437752" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="41" lineNum="10" pc="268437771" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="41" lineNum="11" pc="268437775" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="41" lineNum="12" pc="268437786" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="41" lineNum="13" pc="268437810" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItMenuDelegate.mc" id="41" lineNum="14" pc="268437821" symbol="onMenuItem"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="43" lineNum="4" pc="268437846" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="43" lineNum="4" pc="268437850" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="44" lineNum="6" pc="268437869" symbol="onMenu"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="44" lineNum="7" pc="268437873" symbol="onMenu"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="44" lineNum="9" pc="268437957" symbol="onMenu"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="45" lineNum="12" pc="268437961" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="45" lineNum="12" pc="268437965" symbol="onNextPage"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="46" lineNum="14" pc="268437989" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="46" lineNum="14" pc="268437993" symbol="onPreviousPage"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="47" lineNum="16" pc="268438017" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="47" lineNum="17" pc="268438021" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="47" lineNum="18" pc="268438044" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="48" lineNum="21" pc="268438048" symbol="onStart"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="48" lineNum="22" pc="268438052" symbol="onStart"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="49" lineNum="25" pc="268438073" symbol="onRelax"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItDelegate.mc" id="49" lineNum="26" pc="268438077" symbol="onRelax"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="51" lineNum="17" pc="268438101" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="51" lineNum="18" pc="268438105" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="51" lineNum="19" pc="268438115" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="51" lineNum="20" pc="268438145" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="52" lineNum="23" pc="268438186" symbol="score"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="52" lineNum="24" pc="268438190" symbol="score"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="52" lineNum="25" pc="268438205" symbol="score"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="52" lineNum="26" pc="268438225" symbol="score"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="53" lineNum="30" pc="268438251" symbol="hasEnded"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="53" lineNum="31" pc="268438255" symbol="hasEnded"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="54" lineNum="34" pc="268438259" symbol="getRallies"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\MatchGame.mc" id="54" lineNum="35" pc="268438263" symbol="getRallies"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="56" lineNum="5" pc="268438273" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="56" lineNum="6" pc="268438277" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="57" lineNum="10" pc="268438296" symbol="onLayout"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="57" lineNum="11" pc="268438300" symbol="onLayout"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="58" lineNum="17" pc="268438338" symbol="onShow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="59" lineNum="21" pc="268438343" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="59" lineNum="22" pc="268438347" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="59" lineNum="23" pc="268438383" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="59" lineNum="25" pc="268438397" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItView.mc" id="60" lineNum="31" pc="268438418" symbol="onHide"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="62" lineNum="16" pc="268438423" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="62" lineNum="16" pc="268438427" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="63" lineNum="18" pc="268438446" symbol="onShow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="63" lineNum="19" pc="268438450" symbol="onShow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="63" lineNum="21" pc="268438471" symbol="onShow"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="64" lineNum="24" pc="268438513" symbol="onHide"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="64" lineNum="25" pc="268438517" symbol="onHide"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="64" lineNum="26" pc="268438538" symbol="onHide"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="64" lineNum="27" pc="268438556" symbol="onHide"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="30" pc="268438570" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="31" pc="268438574" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="32" pc="268438593" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="33" pc="268438606" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="34" pc="268438613" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="35" pc="268438613" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="36" pc="268438632" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="39" pc="268438662" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="65" lineNum="40" pc="268438707" symbol="refresh"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="45" pc="268438724" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="46" pc="268438728" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="47" pc="268438741" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="48" pc="268438754" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="49" pc="268438781" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="50" pc="268438795" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="52" pc="268438821" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="55" pc="268438847" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="56" pc="268438883" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="57" pc="268438915" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="58" pc="268438953" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="59" pc="268438989" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="60" pc="268439026" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="62" pc="268439092" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="63" pc="268439109" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="65" pc="268439155" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="67" pc="268439198" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="70" pc="268439279" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="73" pc="268439350" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="76" pc="268439449" symbol="onUpdate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="66" lineNum="12" pc="268441346" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="68" lineNum="83" pc="268439531" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="68" lineNum="83" pc="268439535" symbol="initialize"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="69" lineNum="85" pc="268439554" symbol="vibrate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="69" lineNum="86" pc="268439558" symbol="vibrate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="69" lineNum="87" pc="268439607" symbol="vibrate"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="70" lineNum="90" pc="268439626" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="70" lineNum="92" pc="268439630" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="70" lineNum="93" pc="268439651" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="70" lineNum="94" pc="268439667" symbol="onBack"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="71" lineNum="97" pc="268439671" symbol="onTap"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="71" lineNum="98" pc="268439675" symbol="onTap"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="71" lineNum="99" pc="268439701" symbol="onTap"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="71" lineNum="100" pc="268439719" symbol="onTap"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="103" pc="268439747" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="104" pc="268439751" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="105" pc="268439774" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="106" pc="268439795" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="107" pc="268439812" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="108" pc="268439846" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="109" pc="268439870" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="72" lineNum="111" pc="268439927" symbol="onKey"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="73" lineNum="115" pc="268439949" symbol="onEnter"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="73" lineNum="115" pc="268439953" symbol="onEnter"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="74" lineNum="117" pc="268439975" symbol="onStart"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="74" lineNum="117" pc="268439979" symbol="onStart"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="75" lineNum="119" pc="268440001" symbol="onMenu"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="75" lineNum="119" pc="268440005" symbol="onMenu"/>
+        <entry filename="Rez" id="79" lineNum="11" pc="268440027" symbol="initialize"/>
+        <entry filename="Rez" id="79" lineNum="12" pc="268440031" symbol="initialize"/>
+        <entry filename="Rez" id="80" lineNum="15" pc="268440056" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="16" pc="268440060" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="17" pc="268440073" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="20" pc="268440086" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="21" pc="268440122" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="23" pc="268440190" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="24" pc="268440226" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="26" pc="268440294" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="27" pc="268440330" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="29" pc="268440398" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="30" pc="268440434" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="32" pc="268440502" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="33" pc="268440538" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="35" pc="268440627" symbol="draw"/>
+        <entry filename="Rez" id="80" lineNum="36" pc="268440663" symbol="draw"/>
+        <entry filename="Rez" id="84" lineNum="53" pc="268440753" symbol="MainLayout"/>
+        <entry filename="Rez" id="84" lineNum="56" pc="268440765" symbol="MainLayout"/>
+        <entry filename="Rez" id="84" lineNum="57" pc="268440805" symbol="MainLayout"/>
+        <entry filename="Rez" id="84" lineNum="58" pc="268440818" symbol="MainLayout"/>
+        <entry filename="Rez" id="84" lineNum="60" pc="268440834" symbol="MainLayout"/>
+        <entry filename="Rez" id="84" lineNum="62" pc="268441069" symbol="MainLayout"/>
+        <entry filename="Rez" id="87" lineNum="75" pc="268441097" symbol="initialize"/>
+        <entry filename="Rez" id="87" lineNum="76" pc="268441101" symbol="initialize"/>
+        <entry filename="Rez" id="87" lineNum="77" pc="268441119" symbol="initialize"/>
+        <entry filename="Rez" id="87" lineNum="78" pc="268441175" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
+        <entry id="37" method="true" symbol="getCurrentSetIndex"/>
         <entry id="8388639" module="true" symbol="Graphics"/>
-        <entry id="30" method="true" symbol="isInProgress"/>
-        <entry field="true" id="24" symbol="refreshTimer"/>
-        <entry field="true" id="13" symbol="bus"/>
+        <entry field="true" id="59" symbol="beginner"/>
+        <entry id="35" method="true" symbol="isInProgress"/>
+        <entry id="8388792" method="true" symbol="isEmpty"/>
+        <entry field="true" id="26" symbol="refreshTimer"/>
+        <entry field="true" id="14" symbol="bus"/>
         <entry id="8388632" method="true" symbol="&lt;init&gt;"/>
         <entry id="4" module="true" symbol="globals/Rez/Menus"/>
-        <entry field="true" id="26" symbol="dots"/>
-        <entry id="39" method="true" symbol="MainLayout"/>
-        <entry field="true" id="31" symbol="timer"/>
-        <entry id="22" object="true" symbol="InitialViewDelegate"/>
-        <entry field="true" id="10" symbol="boundaries"/>
-        <entry field="true" id="14" symbol="match"/>
-        <entry field="true" id="20" symbol="config"/>
+        <entry field="true" id="28" symbol="dots"/>
+        <entry id="39" method="true" symbol="scorePlayer"/>
+        <entry id="72" method="true" symbol="grow"/>
+        <entry id="49" method="true" symbol="MainLayout"/>
+        <entry field="true" id="41" symbol="timer"/>
+        <entry field="true" id="60" symbol="rallies"/>
+        <entry id="24" object="true" symbol="InitialViewDelegate"/>
+        <entry field="true" id="11" symbol="boundaries"/>
+        <entry field="true" id="66" symbol="INITIAL_SIZE"/>
+        <entry id="62" method="true" symbol="score"/>
+        <entry id="8388791" method="true" symbol="remove"/>
+        <entry field="true" id="15" symbol="match"/>
+        <entry field="true" id="22" symbol="config"/>
         <entry field="true" id="8389103" symbol="behavior"/>
         <entry field="true" id="8388611" module="true" symbol="Toybox"/>
-        <entry id="12" object="true" symbol="MatchViewDelegate"/>
-        <entry id="37" object="true" symbol="screenDivider"/>
-        <entry field="true" id="28" symbol="typeLabel"/>
-        <entry id="48" method="true" symbol="onRelax"/>
+        <entry id="13" object="true" symbol="MatchViewDelegate"/>
+        <entry id="47" object="true" symbol="screenDivider"/>
+        <entry field="true" id="30" symbol="typeLabel"/>
+        <entry id="58" method="true" symbol="onRelax"/>
+        <entry field="true" id="8388782" method="true" symbol="size"/>
+        <entry id="20" object="true" symbol="MatchGame"/>
         <entry id="8" module="true" symbol="globals/Rez/Strings"/>
+        <entry field="true" id="67" symbol="elements"/>
         <entry id="8389080" method="true" symbol="onMenu"/>
         <entry id="8388772" module="true" object="true" symbol="Fonts"/>
-        <entry id="11" object="true" symbol="MatchView"/>
+        <entry field="true" id="32" symbol="games"/>
+        <entry id="12" object="true" symbol="MatchView"/>
         <entry field="true" id="8389898" symbol="stateHighlighted"/>
+        <entry field="true" id="8388795" method="true" symbol="length"/>
+        <entry id="8388631" module="true" symbol="Activity"/>
         <entry id="8388648" module="true" symbol="WatchUi"/>
         <entry id="8389081" method="true" symbol="onBack"/>
+        <entry field="true" id="61" symbol="scores"/>
         <entry id="2" module="true" symbol="globals/Rez"/>
-        <entry field="true" id="47" symbol="prompt"/>
+        <entry field="true" id="57" symbol="prompt"/>
+        <entry id="8388789" method="true" symbol="get"/>
         <entry id="8389124" method="true" symbol="onUpdate"/>
         <entry field="true" id="8389065" symbol="locY"/>
         <entry field="true" id="8389064" symbol="locX"/>
-        <entry id="54" symbol="y2"/>
-        <entry id="53" symbol="y1"/>
-        <entry id="52" symbol="x2"/>
-        <entry id="51" symbol="x1"/>
+        <entry id="76" symbol="y2"/>
+        <entry id="75" symbol="y1"/>
+        <entry id="74" symbol="x2"/>
+        <entry id="73" symbol="x1"/>
         <entry field="true" id="8389899" symbol="stateSelected"/>
         <entry id="8388771" module="true" object="true" symbol="Drawables"/>
         <entry field="true" id="8389067" symbol="height"/>
-        <entry id="59" symbol="item_2"/>
-        <entry id="58" symbol="item_1"/>
+        <entry id="9" object="true" symbol="List"/>
+        <entry id="81" symbol="item_2"/>
+        <entry id="80" symbol="item_1"/>
         <entry id="8389079" method="true" symbol="onPreviousPage"/>
-        <entry id="35" module="true" symbol="Menus"/>
-        <entry field="true" id="46" symbol="press_start_label"/>
+        <entry id="45" module="true" symbol="Menus"/>
+        <entry field="true" id="56" symbol="press_start_label"/>
         <entry id="6" module="true" symbol="globals/Rez/Layouts"/>
         <entry field="true" id="8389066" symbol="width"/>
         <entry id="8389122" method="true" symbol="onLayout"/>
+        <entry field="true" id="33" symbol="server"/>
+        <entry id="71" method="true" symbol="last"/>
         <entry id="8389098" method="true" symbol="onTap"/>
         <entry id="8388987" method="true" symbol="vibrate"/>
-        <entry field="true" id="42" symbol="settings_opponent_name_title"/>
+        <entry field="true" id="52" symbol="settings_opponent_name_title"/>
         <entry id="7" module="true" symbol="globals/Rez/JsonData"/>
         <entry field="true" id="8389892" symbol="background"/>
-        <entry id="21" object="true" symbol="InitialView"/>
-        <entry id="19" object="true" symbol="SquashItView"/>
+        <entry id="23" object="true" symbol="InitialView"/>
+        <entry id="21" object="true" symbol="SquashItView"/>
         <entry id="3" module="true" symbol="globals/Rez/Drawables"/>
-        <entry id="38" object="true" symbol="MainMenu"/>
-        <entry id="17" object="true" symbol="SquashItMenuDelegate"/>
-        <entry field="true" id="40" symbol="press_continue_label"/>
-        <entry id="32" method="true" symbol="testJe"/>
+        <entry id="48" object="true" symbol="MainMenu"/>
+        <entry id="8389823" method="true" symbol="indexOf"/>
+        <entry id="18" object="true" symbol="SquashItMenuDelegate"/>
+        <entry field="true" id="50" symbol="press_continue_label"/>
+        <entry id="42" method="true" symbol="testJe"/>
         <entry id="8388644" module="true" symbol="System"/>
+        <entry id="36" method="true" symbol="getSetsNumber"/>
         <entry field="true" id="8389897" symbol="stateDefault"/>
-        <entry id="56" symbol="player_2_btn"/>
-        <entry field="true" id="25" symbol="ticks"/>
+        <entry id="78" symbol="player_2_btn"/>
+        <entry field="true" id="27" symbol="ticks"/>
+        <entry id="8388645" module="true" symbol="Time"/>
         <entry id="8388769" module="true" object="true" symbol="Rez"/>
-        <entry field="true" id="29" symbol="started"/>
+        <entry field="true" id="31" symbol="started"/>
         <entry id="8388640" module="true" symbol="Lang"/>
         <entry id="8390088" module="true" object="true" symbol="JsonData"/>
-        <entry id="23" method="true" symbol="onEnter"/>
+        <entry id="25" method="true" symbol="onEnter"/>
         <entry id="8389068" method="true" symbol="draw"/>
-        <entry id="33" method="true" symbol="getBoundaries"/>
-        <entry field="true" id="36" symbol="LauncherIcon"/>
+        <entry id="43" method="true" symbol="getBoundaries"/>
+        <entry field="true" id="46" symbol="LauncherIcon"/>
         <entry id="8388610" symbol="statics"/>
         <entry id="8389123" method="true" symbol="onShow"/>
         <entry id="8389350" module="true" symbol="globals"/>
         <entry id="8388770" module="true" object="true" symbol="Strings"/>
         <entry id="8388702" method="true" symbol="initialize"/>
-        <entry id="57" symbol="player_1"/>
+        <entry id="82" symbol="player_2"/>
+        <entry id="79" symbol="player_1"/>
         <entry id="8389279" method="true" symbol="onStart"/>
-        <entry id="27" method="true" symbol="refresh"/>
-        <entry field="true" id="49" symbol="view"/>
-        <entry id="50" method="true" symbol="whichButtonWasPressed"/>
-        <entry field="true" id="43" symbol="next_opponent_label"/>
+        <entry id="29" method="true" symbol="refresh"/>
+        <entry field="true" id="64" symbol="view"/>
+        <entry id="65" method="true" symbol="whichButtonWasPressed"/>
+        <entry field="true" id="53" symbol="next_opponent_label"/>
+        <entry id="63" method="true" symbol="getRallies"/>
         <entry id="8389280" method="true" symbol="getInitialView"/>
         <entry id="8389281" method="true" symbol="onStop"/>
+        <entry id="38" method="true" symbol="getCurrentSet"/>
         <entry id="8389109" method="true" symbol="onMenuItem"/>
         <entry id="8389097" method="true" symbol="onKey"/>
-        <entry field="true" id="15" symbol="device"/>
-        <entry id="18" object="true" symbol="SquashItDelegate"/>
+        <entry field="true" id="16" symbol="device"/>
+        <entry id="19" object="true" symbol="SquashItDelegate"/>
         <entry field="true" id="8389900" symbol="stateDisabled"/>
         <entry id="8388646" module="true" object="true" symbol="Timer"/>
-        <entry id="34" module="true" symbol="Layouts"/>
+        <entry id="44" module="true" symbol="Layouts"/>
+        <entry id="40" method="true" symbol="hasEnded"/>
+        <entry id="69" method="true" symbol="pop"/>
         <entry id="8388636" module="true" symbol="Attention"/>
-        <entry id="16" object="true" symbol="SquashItApp"/>
+        <entry id="17" object="true" symbol="SquashItApp"/>
+        <entry field="true" id="8389846" symbol="type"/>
         <entry id="5" module="true" symbol="globals/Rez/Fonts"/>
+        <entry id="68" method="true" symbol="push"/>
         <entry id="8389125" method="true" symbol="onHide"/>
-        <entry id="55" symbol="player_1_btn"/>
-        <entry id="9" object="true" symbol="Match"/>
+        <entry field="true" id="34" symbol="winner"/>
+        <entry id="77" symbol="player_1_btn"/>
+        <entry id="10" object="true" symbol="Match"/>
+        <entry id="70" method="true" symbol="first"/>
         <entry id="8389078" method="true" symbol="onNextPage"/>
-        <entry field="true" id="41" symbol="application_name"/>
-        <entry field="true" id="45" symbol="menu_label_2"/>
-        <entry field="true" id="44" symbol="menu_label_1"/>
+        <entry field="true" id="51" symbol="application_name"/>
+        <entry field="true" id="55" symbol="menu_label_2"/>
+        <entry field="true" id="54" symbol="menu_label_1"/>
     </symbolTable>
     <localVars>
-        <entry arg="true" endPc="268435635" name="dc" stackId="1" startPc="268435593"/>
-        <entry arg="true" endPc="268435664" name="player" stackId="1" startPc="268435635"/>
-        <entry endPc="268435930" name="player_2_btn_bounds" stackId="2" startPc="268435668"/>
-        <entry endPc="268435930" name="player_1_btn_bounds" stackId="1" startPc="268435668"/>
-        <entry endPc="268436302" name="myRaster" stackId="2" startPc="268435935"/>
-        <entry arg="true" endPc="268436303" name="dc" stackId="1" startPc="268435931"/>
-        <entry arg="true" endPc="268436336" name="_view" stackId="1" startPc="268436303"/>
-        <entry endPc="268436421" name="view" stackId="1" startPc="268436340"/>
-        <entry endPc="268436701" name="x" stackId="2" startPc="268436426"/>
-        <entry endPc="268436701" name="p1_btn" stackId="4" startPc="268436426"/>
-        <entry endPc="268436701" name="p2_btn" stackId="5" startPc="268436426"/>
-        <entry endPc="268436701" name="y" stackId="3" startPc="268436426"/>
-        <entry arg="true" endPc="268436702" name="coords" stackId="1" startPc="268436422"/>
-        <entry arg="true" endPc="268436730" name="event" stackId="1" startPc="268436702"/>
-        <entry arg="true" endPc="268436807" name="state" stackId="1" startPc="268436802"/>
-        <entry arg="true" endPc="268436812" name="state" stackId="1" startPc="268436807"/>
-        <entry endPc="268436889" name="view" stackId="1" startPc="268436816"/>
-        <entry arg="true" endPc="268436988" name="item" stackId="1" startPc="268436913"/>
-        <entry arg="true" endPc="268437215" name="state" stackId="1" startPc="268437190"/>
-        <entry arg="true" endPc="268437308" name="dc" stackId="1" startPc="268437266"/>
-        <entry endPc="268437387" name="myRaster" stackId="2" startPc="268437317"/>
-        <entry arg="true" endPc="268437388" name="dc" stackId="1" startPc="268437313"/>
-        <entry endPc="268437693" name="counter" stackId="1" startPc="268437544"/>
-        <entry endPc="268438500" name="appName" stackId="6" startPc="268437698"/>
-        <entry endPc="268438500" name="height" stackId="3" startPc="268437698"/>
-        <entry endPc="268438500" name="backgroundColor" stackId="5" startPc="268437698"/>
-        <entry endPc="268438500" name="width" stackId="2" startPc="268437698"/>
-        <entry endPc="268438500" name="textCenter" stackId="4" startPc="268437698"/>
-        <entry arg="true" endPc="268438501" name="dc" stackId="1" startPc="268437694"/>
-        <entry arg="true" endPc="268438524" name="view" stackId="1" startPc="268438501"/>
-        <entry endPc="268438595" name="vibrateData" stackId="2" startPc="268438528"/>
-        <entry arg="true" endPc="268438596" name="duration" stackId="1" startPc="268438524"/>
-        <entry endPc="268438716" name="center" stackId="2" startPc="268438645"/>
-        <entry arg="true" endPc="268438717" name="event" stackId="1" startPc="268438641"/>
-        <entry endPc="268438894" name="matchView" stackId="2" startPc="268438744"/>
-        <entry arg="true" endPc="268438919" name="keyEvent" stackId="1" startPc="268438717"/>
-        <entry arg="true" endPc="268438971" name="state" stackId="1" startPc="268438945"/>
-        <entry endPc="268439722" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268439030"/>
-        <entry endPc="268439722" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268439030"/>
-        <entry arg="true" endPc="268439723" name="dc" stackId="1" startPc="268439026"/>
-        <entry endPc="268440066" name="rez_cmp_local_custom_drawable_screenDivider" stackId="2" startPc="268439735"/>
-        <entry endPc="268440066" name="rez_cmp_local_custom_selectable_92177403821360853151" stackId="3" startPc="268439735"/>
-        <entry arg="true" endPc="268440067" name="dc" stackId="1" startPc="268439723"/>
+        <entry arg="true" endPc="268435623" name="index" stackId="1" startPc="268435525"/>
+        <entry arg="true" endPc="268435648" name="element" stackId="1" startPc="268435623"/>
+        <entry arg="true" endPc="268435692" name="element" stackId="1" startPc="268435648"/>
+        <entry arg="true" endPc="268435785" name="element" stackId="1" startPc="268435692"/>
+        <entry endPc="268436001" name="i" stackId="2" startPc="268435972"/>
+        <entry endPc="268436011" name="new_elements" stackId="1" startPc="268435922"/>
+        <entry endPc="268436119" name="i" stackId="3" startPc="268436090"/>
+        <entry arg="true" endPc="268436120" name="match_beginner" stackId="2" startPc="268436012"/>
+        <entry arg="true" endPc="268436120" name="games_to_play" stackId="1" startPc="268436012"/>
+        <entry endPc="268436236" name="i" stackId="1" startPc="268436161"/>
+        <entry endPc="268436331" name="game" stackId="2" startPc="268436282"/>
+        <entry endPc="268436331" name="previous_rally" stackId="3" startPc="268436282"/>
+        <entry arg="true" endPc="268436335" name="scorer" stackId="1" startPc="268436263"/>
+        <entry arg="true" endPc="268436493" name="dc" stackId="1" startPc="268436451"/>
+        <entry arg="true" endPc="268436522" name="player" stackId="1" startPc="268436493"/>
+        <entry endPc="268436788" name="player_2_btn_bounds" stackId="2" startPc="268436526"/>
+        <entry endPc="268436788" name="player_1_btn_bounds" stackId="1" startPc="268436526"/>
+        <entry endPc="268437160" name="myRaster" stackId="2" startPc="268436793"/>
+        <entry arg="true" endPc="268437161" name="dc" stackId="1" startPc="268436789"/>
+        <entry arg="true" endPc="268437194" name="_view" stackId="1" startPc="268437161"/>
+        <entry endPc="268437279" name="view" stackId="1" startPc="268437198"/>
+        <entry endPc="268437559" name="x" stackId="2" startPc="268437284"/>
+        <entry endPc="268437559" name="p1_btn" stackId="4" startPc="268437284"/>
+        <entry endPc="268437559" name="p2_btn" stackId="5" startPc="268437284"/>
+        <entry endPc="268437559" name="y" stackId="3" startPc="268437284"/>
+        <entry arg="true" endPc="268437560" name="coords" stackId="1" startPc="268437280"/>
+        <entry arg="true" endPc="268437588" name="event" stackId="1" startPc="268437560"/>
+        <entry arg="true" endPc="268437665" name="state" stackId="1" startPc="268437660"/>
+        <entry arg="true" endPc="268437670" name="state" stackId="1" startPc="268437665"/>
+        <entry endPc="268437747" name="view" stackId="1" startPc="268437674"/>
+        <entry arg="true" endPc="268437846" name="item" stackId="1" startPc="268437771"/>
+        <entry arg="true" endPc="268438073" name="state" stackId="1" startPc="268438048"/>
+        <entry arg="true" endPc="268438186" name="player" stackId="1" startPc="268438101"/>
+        <entry arg="true" endPc="268438251" name="player" stackId="1" startPc="268438186"/>
+        <entry arg="true" endPc="268438338" name="dc" stackId="1" startPc="268438296"/>
+        <entry endPc="268438417" name="myRaster" stackId="2" startPc="268438347"/>
+        <entry arg="true" endPc="268438418" name="dc" stackId="1" startPc="268438343"/>
+        <entry endPc="268438723" name="counter" stackId="1" startPc="268438574"/>
+        <entry endPc="268439530" name="appName" stackId="6" startPc="268438728"/>
+        <entry endPc="268439530" name="height" stackId="3" startPc="268438728"/>
+        <entry endPc="268439530" name="backgroundColor" stackId="5" startPc="268438728"/>
+        <entry endPc="268439530" name="width" stackId="2" startPc="268438728"/>
+        <entry endPc="268439530" name="textCenter" stackId="4" startPc="268438728"/>
+        <entry arg="true" endPc="268439531" name="dc" stackId="1" startPc="268438724"/>
+        <entry arg="true" endPc="268439554" name="view" stackId="1" startPc="268439531"/>
+        <entry endPc="268439625" name="vibrateData" stackId="2" startPc="268439558"/>
+        <entry arg="true" endPc="268439626" name="duration" stackId="1" startPc="268439554"/>
+        <entry endPc="268439746" name="center" stackId="2" startPc="268439675"/>
+        <entry arg="true" endPc="268439747" name="event" stackId="1" startPc="268439671"/>
+        <entry endPc="268439924" name="matchView" stackId="2" startPc="268439774"/>
+        <entry arg="true" endPc="268439949" name="keyEvent" stackId="1" startPc="268439747"/>
+        <entry arg="true" endPc="268440001" name="state" stackId="1" startPc="268439975"/>
+        <entry endPc="268440752" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268440060"/>
+        <entry endPc="268440752" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268440060"/>
+        <entry arg="true" endPc="268440753" name="dc" stackId="1" startPc="268440056"/>
+        <entry endPc="268441096" name="rez_cmp_local_custom_selectable_79454572118611556465" stackId="3" startPc="268440765"/>
+        <entry endPc="268441096" name="rez_cmp_local_custom_drawable_screenDivider" stackId="2" startPc="268440765"/>
+        <entry arg="true" endPc="268441097" name="dc" stackId="1" startPc="268440753"/>
     </localVars>
     <annotations/>
     <dataEntryOffsetMappings>
         <dataEntry offset="87" parentId="" symbolId="globals" type="module"/>
-        <dataEntry offset="246" parentId="globals" symbolId="InitialViewDelegate" type="class"/>
-        <dataEntry offset="349" parentId="globals" symbolId="SquashItView" type="class"/>
-        <dataEntry offset="428" parentId="globals" symbolId="InitialView" type="class"/>
-        <dataEntry offset="539" parentId="globals" symbolId="Match" type="class"/>
-        <dataEntry offset="602" parentId="globals" symbolId="SquashItMenuDelegate" type="class"/>
-        <dataEntry offset="657" parentId="globals" symbolId="MatchView" type="class"/>
-        <dataEntry offset="744" parentId="globals" symbolId="Rez" type="module"/>
-        <dataEntry offset="823" parentId="Rez" symbolId="Drawables" type="module"/>
-        <dataEntry offset="870" parentId="Drawables" symbolId="screenDivider" type="class"/>
-        <dataEntry offset="925" parentId="Rez" symbolId="Menus" type="module"/>
-        <dataEntry offset="964" parentId="Menus" symbolId="MainMenu" type="class"/>
-        <dataEntry offset="1011" parentId="Rez" symbolId="Fonts" type="module"/>
-        <dataEntry offset="1042" parentId="Rez" symbolId="Layouts" type="module"/>
-        <dataEntry offset="1081" parentId="Rez" symbolId="JsonData" type="module"/>
-        <dataEntry offset="1112" parentId="Rez" symbolId="Strings" type="module"/>
-        <dataEntry offset="1207" parentId="globals" symbolId="SquashItDelegate" type="class"/>
-        <dataEntry offset="1302" parentId="globals" symbolId="MatchViewDelegate" type="class"/>
-        <dataEntry offset="1389" parentId="globals" symbolId="SquashItApp" type="class"/>
+        <dataEntry offset="262" parentId="globals" symbolId="InitialViewDelegate" type="class"/>
+        <dataEntry offset="365" parentId="globals" symbolId="SquashItView" type="class"/>
+        <dataEntry offset="444" parentId="globals" symbolId="InitialView" type="class"/>
+        <dataEntry offset="555" parentId="globals" symbolId="Match" type="class"/>
+        <dataEntry offset="690" parentId="globals" symbolId="SquashItMenuDelegate" type="class"/>
+        <dataEntry offset="745" parentId="globals" symbolId="MatchView" type="class"/>
+        <dataEntry offset="832" parentId="globals" symbolId="Rez" type="module"/>
+        <dataEntry offset="911" parentId="Rez" symbolId="Drawables" type="module"/>
+        <dataEntry offset="958" parentId="Drawables" symbolId="screenDivider" type="class"/>
+        <dataEntry offset="1013" parentId="Rez" symbolId="Menus" type="module"/>
+        <dataEntry offset="1052" parentId="Menus" symbolId="MainMenu" type="class"/>
+        <dataEntry offset="1099" parentId="Rez" symbolId="Fonts" type="module"/>
+        <dataEntry offset="1130" parentId="Rez" symbolId="Layouts" type="module"/>
+        <dataEntry offset="1169" parentId="Rez" symbolId="JsonData" type="module"/>
+        <dataEntry offset="1200" parentId="Rez" symbolId="Strings" type="module"/>
+        <dataEntry offset="1295" parentId="globals" symbolId="SquashItDelegate" type="class"/>
+        <dataEntry offset="1390" parentId="globals" symbolId="MatchGame" type="class"/>
+        <dataEntry offset="1493" parentId="globals" symbolId="MatchViewDelegate" type="class"/>
+        <dataEntry offset="1580" parentId="globals" symbolId="SquashItApp" type="class"/>
+        <dataEntry offset="1651" parentId="globals" symbolId="List" type="class"/>
     </dataEntryOffsetMappings>
     <functions>
+        <functionEntry accessMode="public" name="initialize" parent="List">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="size" parent="List">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="isEmpty" parent="List">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="get" parent="List">
+            <param id="index"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="indexOf" parent="List">
+            <param id="element"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="remove" parent="List">
+            <param id="element"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="push" parent="List">
+            <param id="element"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="pop" parent="List">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="first" parent="List">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="last" parent="List">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="protected" name="grow" parent="List">
+            <documentation/>
+        </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="Match">
+            <param id="games_to_play"/>
+            <param id="match_beginner"/>
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="isInProgress" parent="Match">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getSetsNumber" parent="Match">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getCurrentSetIndex" parent="Match">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getCurrentSet" parent="Match">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="scorePlayer" parent="Match">
+            <param id="scorer"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="hasEnded" parent="Match">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="MatchView">
@@ -438,6 +607,20 @@
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="onRelax" parent="SquashItDelegate">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="initialize" parent="MatchGame">
+            <param id="player"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="score" parent="MatchGame">
+            <param id="player"/>
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="hasEnded" parent="MatchGame">
+            <documentation/>
+        </functionEntry>
+        <functionEntry accessMode="public" name="getRallies" parent="MatchGame">
             <documentation/>
         </functionEntry>
         <functionEntry accessMode="public" name="initialize" parent="SquashItView">
