@@ -38,7 +38,7 @@
         <entry filename="UnitTests" id="10" lineNum="52" pc="268435908" symbol="runTest"/>
         <entry filename="UnitTests" id="10" lineNum="53" pc="268435922" symbol="runTest"/>
         <entry filename="UnitTests" id="10" lineNum="55" pc="268435928" symbol="runTest"/>
-        <entry filename="UnitTests" id="10" lineNum="7" pc="268456440" symbol="&lt;init&gt;"/>
+        <entry filename="UnitTests" id="10" lineNum="7" pc="268455921" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="12" lineNum="7" pc="268435932" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="12" lineNum="8" pc="268435936" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\lib\\List.mc" id="12" lineNum="9" pc="268435953" symbol="initialize"/>
@@ -223,7 +223,7 @@
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="59" lineNum="32" pc="268439348" symbol="getInitialView"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="59" lineNum="33" pc="268439352" symbol="getInitialView"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="59" lineNum="34" pc="268439376" symbol="getInitialView"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="59" lineNum="9" pc="268456017" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\SquashItApp.mc" id="59" lineNum="9" pc="268455498" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\GameResultView.mc" id="61" lineNum="8" pc="268439426" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\GameResultView.mc" id="61" lineNum="9" pc="268439430" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\GameResultView.mc" id="62" lineNum="12" pc="268439449" symbol="onLayout"/>
@@ -518,10 +518,10 @@
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="163" pc="268447446" symbol="onSensor"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="167" pc="268447474" symbol="onSensor"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="169" pc="268447487" symbol="onSensor"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="19" pc="268456606" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="20" pc="268456626" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="24" pc="268456646" symbol="&lt;init&gt;"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="25" pc="268456666" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="19" pc="268456087" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="20" pc="268456107" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="24" pc="268456127" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="132" lineNum="25" pc="268456147" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="134" lineNum="176" pc="268447504" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="134" lineNum="177" pc="268447508" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\MatchView.mc" id="134" lineNum="178" pc="268447518" symbol="initialize"/>
@@ -668,7 +668,7 @@
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="161" lineNum="70" pc="268450509" symbol="onUpdate"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="161" lineNum="73" pc="268450580" symbol="onUpdate"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="161" lineNum="76" pc="268450679" symbol="onUpdate"/>
-        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="161" lineNum="12" pc="268456252" symbol="&lt;init&gt;"/>
+        <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="161" lineNum="12" pc="268455733" symbol="&lt;init&gt;"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="163" lineNum="83" pc="268450761" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="163" lineNum="83" pc="268450765" symbol="initialize"/>
         <entry filename="C:\\Users\\cor.vandoorn\\GarminDevlopment\\SquashIt\\source\\views\\InitialView.mc" id="164" lineNum="85" pc="268450784" symbol="onBack"/>
@@ -697,64 +697,55 @@
         <entry filename="Rez" id="173" lineNum="11" pc="268451260" symbol="initialize"/>
         <entry filename="Rez" id="173" lineNum="12" pc="268451264" symbol="initialize"/>
         <entry filename="Rez" id="174" lineNum="15" pc="268451289" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="16" pc="268451293" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="17" pc="268451306" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="20" pc="268451319" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="21" pc="268451355" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="23" pc="268451423" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="24" pc="268451459" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="26" pc="268451527" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="27" pc="268451563" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="29" pc="268451631" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="30" pc="268451667" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="32" pc="268451735" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="33" pc="268451771" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="35" pc="268451860" symbol="draw"/>
-        <entry filename="Rez" id="174" lineNum="36" pc="268451896" symbol="draw"/>
-        <entry filename="Rez" id="178" lineNum="53" pc="268451986" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="55" pc="268451998" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="56" pc="268452011" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="58" pc="268452024" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="59" pc="268452163" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="60" pc="268452302" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="61" pc="268452441" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="62" pc="268452580" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="63" pc="268452719" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="64" pc="268452930" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="65" pc="268453069" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="66" pc="268453280" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="67" pc="268453419" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="68" pc="268453630" symbol="game_result"/>
-        <entry filename="Rez" id="178" lineNum="70" pc="268453769" symbol="game_result"/>
-        <entry filename="Rez" id="179" lineNum="79" pc="268453887" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="81" pc="268453899" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="82" pc="268453912" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="84" pc="268453925" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="85" pc="268453965" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="86" pc="268453978" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="88" pc="268453994" symbol="MainLayout"/>
-        <entry filename="Rez" id="179" lineNum="90" pc="268454225" symbol="MainLayout"/>
-        <entry filename="Rez" id="180" lineNum="99" pc="268454253" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="101" pc="268454265" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="102" pc="268454278" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="104" pc="268454291" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="105" pc="268454430" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="106" pc="268454569" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="107" pc="268454708" symbol="result"/>
-        <entry filename="Rez" id="180" lineNum="109" pc="268454847" symbol="result"/>
-        <entry filename="Rez" id="181" lineNum="118" pc="268454895" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="120" pc="268454907" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="122" pc="268454920" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="123" pc="268455075" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="124" pc="268455211" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="125" pc="268455347" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="126" pc="268455483" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="127" pc="268455619" symbol="stats"/>
-        <entry filename="Rez" id="181" lineNum="129" pc="268455791" symbol="stats"/>
-        <entry filename="Rez" id="184" lineNum="142" pc="268455859" symbol="initialize"/>
-        <entry filename="Rez" id="184" lineNum="143" pc="268455863" symbol="initialize"/>
-        <entry filename="Rez" id="184" lineNum="144" pc="268455881" symbol="initialize"/>
-        <entry filename="Rez" id="184" lineNum="145" pc="268455937" symbol="initialize"/>
+        <entry filename="Rez" id="174" lineNum="17" pc="268451293" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="18" pc="268451329" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="20" pc="268451361" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="21" pc="268451397" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="23" pc="268451429" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="24" pc="268451465" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="26" pc="268451497" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="27" pc="268451533" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="29" pc="268451565" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="30" pc="268451601" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="32" pc="268451633" symbol="draw"/>
+        <entry filename="Rez" id="174" lineNum="33" pc="268451669" symbol="draw"/>
+        <entry filename="Rez" id="178" lineNum="50" pc="268451702" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="52" pc="268451714" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="53" pc="268451847" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="54" pc="268451980" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="55" pc="268452113" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="56" pc="268452246" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="57" pc="268452379" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="58" pc="268452578" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="59" pc="268452711" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="60" pc="268452910" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="61" pc="268453043" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="62" pc="268453242" symbol="game_result"/>
+        <entry filename="Rez" id="178" lineNum="64" pc="268453375" symbol="game_result"/>
+        <entry filename="Rez" id="179" lineNum="73" pc="268453493" symbol="MainLayout"/>
+        <entry filename="Rez" id="179" lineNum="75" pc="268453505" symbol="MainLayout"/>
+        <entry filename="Rez" id="179" lineNum="76" pc="268453545" symbol="MainLayout"/>
+        <entry filename="Rez" id="179" lineNum="77" pc="268453558" symbol="MainLayout"/>
+        <entry filename="Rez" id="179" lineNum="79" pc="268453574" symbol="MainLayout"/>
+        <entry filename="Rez" id="179" lineNum="81" pc="268453793" symbol="MainLayout"/>
+        <entry filename="Rez" id="180" lineNum="90" pc="268453821" symbol="result"/>
+        <entry filename="Rez" id="180" lineNum="92" pc="268453833" symbol="result"/>
+        <entry filename="Rez" id="180" lineNum="93" pc="268453966" symbol="result"/>
+        <entry filename="Rez" id="180" lineNum="94" pc="268454099" symbol="result"/>
+        <entry filename="Rez" id="180" lineNum="95" pc="268454232" symbol="result"/>
+        <entry filename="Rez" id="180" lineNum="97" pc="268454365" symbol="result"/>
+        <entry filename="Rez" id="181" lineNum="106" pc="268454413" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="108" pc="268454425" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="109" pc="268454577" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="110" pc="268454710" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="111" pc="268454843" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="112" pc="268454976" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="113" pc="268455109" symbol="stats"/>
+        <entry filename="Rez" id="181" lineNum="115" pc="268455272" symbol="stats"/>
+        <entry filename="Rez" id="184" lineNum="128" pc="268455340" symbol="initialize"/>
+        <entry filename="Rez" id="184" lineNum="129" pc="268455344" symbol="initialize"/>
+        <entry filename="Rez" id="184" lineNum="130" pc="268455362" symbol="initialize"/>
+        <entry filename="Rez" id="184" lineNum="131" pc="268455418" symbol="initialize"/>
     </pcToLineNum>
     <symbolTable>
         <entry id="191" method="true" symbol="drawHeartRate"/>
@@ -1224,43 +1215,34 @@
         <entry endPc="268451157" name="num_games" stackId="2" startPc="268450932"/>
         <entry arg="true" endPc="268451182" name="keyEvent" stackId="1" startPc="268450905"/>
         <entry arg="true" endPc="268451234" name="state" stackId="1" startPc="268451208"/>
-        <entry endPc="268451985" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268451293"/>
-        <entry endPc="268451985" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268451293"/>
-        <entry arg="true" endPc="268451986" name="dc" stackId="1" startPc="268451289"/>
-        <entry endPc="268453886" name="rez_cmp_local_custom_selectable_95272035412745628492" stackId="11" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_what_next" stackId="8" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_won_text" stackId="4" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_finish_match" stackId="12" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_score" stackId="5" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_next_server_opponent" stackId="14" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_next_server_you" stackId="10" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_rallies" stackId="6" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_custom_selectable_57230321059883480238" stackId="13" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_custom_selectable_63319422613803961351" stackId="9" startPc="268451998"/>
-        <entry endPc="268453886" name="rez_cmp_local_text_game_result_lapsed_time" stackId="7" startPc="268451998"/>
-        <entry arg="true" endPc="268453887" name="dc" stackId="1" startPc="268451986"/>
-        <entry endPc="268454252" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268453899"/>
-        <entry endPc="268454252" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268453899"/>
-        <entry endPc="268454252" name="rez_cmp_local_custom_drawable_screenDivider" stackId="4" startPc="268453899"/>
-        <entry endPc="268454252" name="rez_cmp_local_textarea_BlockOfText" stackId="5" startPc="268453899"/>
-        <entry arg="true" endPc="268454253" name="dc" stackId="1" startPc="268453887"/>
-        <entry endPc="268454894" name="rez_cmp_local_text_result_rallies" stackId="7" startPc="268454265"/>
-        <entry endPc="268454894" name="rez_cmp_local_text_result_time" stackId="6" startPc="268454265"/>
-        <entry endPc="268454894" name="rez_cmp_local_var_dc_getWidth" stackId="3" startPc="268454265"/>
-        <entry endPc="268454894" name="rez_cmp_local_var_dc_getHeight" stackId="2" startPc="268454265"/>
-        <entry endPc="268454894" name="rez_cmp_local_text_result_won_text" stackId="4" startPc="268454265"/>
-        <entry endPc="268454894" name="rez_cmp_local_text_result_score" stackId="5" startPc="268454265"/>
-        <entry arg="true" endPc="268454895" name="dc" stackId="1" startPc="268454253"/>
-        <entry endPc="268455858" name="rez_cmp_local_text_stats_no_stats" stackId="8" startPc="268454907"/>
-        <entry endPc="268455858" name="rez_cmp_local_text_stats_calories" stackId="7" startPc="268454907"/>
-        <entry endPc="268455858" name="rez_cmp_local_var_dc_getWidth" stackId="2" startPc="268454907"/>
-        <entry endPc="268455858" name="rez_cmp_local_text_stats_meters" stackId="6" startPc="268454907"/>
-        <entry endPc="268455858" name="rez_cmp_local_text_1958793147" stackId="3" startPc="268454907"/>
-        <entry endPc="268455858" name="rez_cmp_local_text_stats_max_heart_rate" stackId="5" startPc="268454907"/>
-        <entry endPc="268455858" name="rez_cmp_local_text_stats_average_heart_rate" stackId="4" startPc="268454907"/>
-        <entry arg="true" endPc="268455859" name="dc" stackId="1" startPc="268454895"/>
+        <entry arg="true" endPc="268451702" name="dc" stackId="1" startPc="268451289"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_what_next" stackId="6" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_won_text" stackId="2" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_custom_selectable_64523588888630665113" stackId="9" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_custom_selectable_19176470187737330511" stackId="7" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_finish_match" stackId="10" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_score" stackId="3" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_next_server_opponent" stackId="12" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_next_server_you" stackId="8" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_rallies" stackId="4" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_custom_selectable_17613563321511176073" stackId="11" startPc="268451714"/>
+        <entry endPc="268453492" name="rez_cmp_local_text_game_result_lapsed_time" stackId="5" startPc="268451714"/>
+        <entry arg="true" endPc="268453493" name="dc" stackId="1" startPc="268451702"/>
+        <entry endPc="268453820" name="rez_cmp_local_custom_drawable_screenDivider" stackId="2" startPc="268453505"/>
+        <entry endPc="268453820" name="rez_cmp_local_textarea_BlockOfText" stackId="3" startPc="268453505"/>
+        <entry arg="true" endPc="268453821" name="dc" stackId="1" startPc="268453493"/>
+        <entry endPc="268454412" name="rez_cmp_local_text_result_rallies" stackId="5" startPc="268453833"/>
+        <entry endPc="268454412" name="rez_cmp_local_text_result_time" stackId="4" startPc="268453833"/>
+        <entry endPc="268454412" name="rez_cmp_local_text_result_won_text" stackId="2" startPc="268453833"/>
+        <entry endPc="268454412" name="rez_cmp_local_text_result_score" stackId="3" startPc="268453833"/>
+        <entry arg="true" endPc="268454413" name="dc" stackId="1" startPc="268453821"/>
+        <entry endPc="268455339" name="rez_cmp_local_text_stats_no_stats" stackId="7" startPc="268454425"/>
+        <entry endPc="268455339" name="rez_cmp_local_text_stats_calories" stackId="6" startPc="268454425"/>
+        <entry endPc="268455339" name="rez_cmp_local_text_1905486084" stackId="2" startPc="268454425"/>
+        <entry endPc="268455339" name="rez_cmp_local_text_stats_meters" stackId="5" startPc="268454425"/>
+        <entry endPc="268455339" name="rez_cmp_local_text_stats_max_heart_rate" stackId="4" startPc="268454425"/>
+        <entry endPc="268455339" name="rez_cmp_local_text_stats_average_heart_rate" stackId="3" startPc="268454425"/>
+        <entry arg="true" endPc="268455340" name="dc" stackId="1" startPc="268454413"/>
     </localVars>
     <annotations>
         <annotationEntry annotation="test" class="MatchTest" module="globals" symbol="testServerInfo"/>

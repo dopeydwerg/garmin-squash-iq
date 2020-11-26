@@ -98,7 +98,7 @@ class InitialViewDelegate extends Ui.BehaviorDelegate {
   function onKey(keyEvent) {
     if (keyEvent.getKey() == KEY_ENTER) {
       Sys.println("Starting the game!!");
-      $.bus.dispatch(new BusEvent(:vibrate, 500));
+      $.bus.dispatch(new BusEvent(:vibrate, 200));
       var num_games = App.getApp().getProperty("games_to_play");
       $.match = new Match(num_games, :player_1);
       var matchView = new MatchView();

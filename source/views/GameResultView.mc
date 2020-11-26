@@ -14,7 +14,7 @@ class GameResultView extends Ui.View {
 	}
 
   function onShow() {
-    $.bus.dispatch(new BusEvent(:vibrate, 500));
+    $.bus.dispatch(new BusEvent(:vibrate, 200));
     var game = $.match.getCurrentGame();
     var game_winner = game.getWinner();
 

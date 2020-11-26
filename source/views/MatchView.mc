@@ -45,14 +45,14 @@ class MatchView extends Ui.View {
   function getBoundaries () {
     var player_1_btn_bounds = {
       :x1 => 0,
-      :x2 => $.device.screenWidth * 0.33,
-      :y1 => $.device.screenHeight * 0.66,
+      :x2 => $.device.screenWidth * 0.40, // Was 0.33
+      :y1 => $.device.screenHeight * 0.60, // Was 0.66
       :y2 => $.device.screenHeight
     };
     var player_2_btn_bounds = {
-      :x1 => $.device.screenWidth * 0.66,
+      :x1 => $.device.screenWidth * 0.60, // Was 0.66
       :x2 => $.device.screenWidth,
-      :y1 => $.device.screenHeight * 0.66,
+      :y1 => $.device.screenHeight * 0.60, // Was 0.66
       :y2 => $.device.screenHeight
     };
 

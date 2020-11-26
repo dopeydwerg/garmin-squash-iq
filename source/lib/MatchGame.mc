@@ -4,6 +4,7 @@ using Toybox.ActivityRecording as Recording;
 using Toybox.Activity as Activity;
 using Toybox.FitContributor as Contributor;
 using Toybox.WatchUi as Ui;
+using Toybox.Math as Math;
 
 class MatchGame {
 
@@ -107,7 +108,7 @@ class MatchGame {
     }
     var elapsedTime = endTime.subtract(startTime).value();
     Sys.println("elapsed seconds : " + elapsedTime);
-    var minutes = elapsedTime % 60;
+    var minutes = Math.floor(elapsedTime / 60);
     Sys.println("minutes are : " + minutes);
     if (!minutes) {
       minutes = 0;
