@@ -107,18 +107,18 @@ class MatchView extends Ui.View {
       dc.drawText(x, y, STATS_LABEL_FONT, "game", textVCenter);
       y = y + VERTICAL_SPACING + dc.getFontHeight(STATS_LABEL_FONT);
 
-      dc.drawText(x, y, Gfx.FONT_TINY, Lang.format("$1$ / $2$", [game.getScore(:player_1), game.getScore(:player_2)]), textVCenter);
+      dc.drawText(x, y, Gfx.FONT_SMALL, Lang.format("$1$ / $2$", [game.getScore(:player_1), game.getScore(:player_2)]), textVCenter);
       y = y + VERTICAL_SPACING + dc.getFontHeight(Gfx.FONT_TINY) - EXTRA_VERTICAL_SPACING;
 
       dc.drawText(x, y, STATS_LABEL_FONT, "match", textVCenter);
       if (serveInfo[:server] == :player_1) {
-        dc.drawText($.device.screenWidth * 0.33 / 2 + 40, y + 5, Gfx.FONT_TINY, serveInfo[:serve], textVCenter);
+        dc.drawText($.device.screenWidth * 0.33 / 2 + 40, y + 5, Gfx.FONT_SMALL, serveInfo[:serve], textVCenter);
       } else {
-        dc.drawText($.device.screenWidth * 0.825 - 40, y + 5, Gfx.FONT_TINY, serveInfo[:serve], textVCenter);
+        dc.drawText($.device.screenWidth * 0.825 - 40, y + 5, Gfx.FONT_SMALL, serveInfo[:serve], textVCenter);
       }
       y = y + VERTICAL_SPACING + dc.getFontHeight(STATS_LABEL_FONT);
 
-      dc.drawText(x, y, Gfx.FONT_TINY, Lang.format("$1$ / $2$", [$.match.getGamesWon(:player_1), $.match.getGamesWon(:player_2)]), textVCenter);
+      dc.drawText(x, y, Gfx.FONT_SMALL, Lang.format("$1$ / $2$", [$.match.getGamesWon(:player_1), $.match.getGamesWon(:player_2)]), textVCenter);
     } else {
       var statsText = "Select Server To Start";
       var textArea = View.findDrawableById("BlockOfText");

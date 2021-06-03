@@ -1,47 +1,38 @@
 <resources>
   <fitContributions>
-		<fitField
+    <fitField
 			id="0"
 			displayInChart="false"
 			displayInActivityLaps="true"
 			displayInActivitySummary="false"
-			sortOrder="0"
+			sortOrder="2"
 			precision="0"
-			dataLabel="@Strings.fit_game_number"
-			unitLabel="@Strings.fit_game_unit_label" />
+			dataLabel="@Strings.fit_game_score_player_1_label"
+			unitLabel="@Strings.fit_score_unit_label" />
     <fitField
 			id="1"
 			displayInChart="false"
 			displayInActivityLaps="true"
 			displayInActivitySummary="false"
-			sortOrder="1"
+			sortOrder="3"
 			precision="0"
-			dataLabel="@Strings.fit_game_score_player_1_label"
+			dataLabel="@Strings.fit_game_score_player_2_label"
 			unitLabel="@Strings.fit_score_unit_label" />
     <fitField
 			id="2"
 			displayInChart="false"
 			displayInActivityLaps="true"
 			displayInActivitySummary="false"
-			sortOrder="2"
+			sortOrder="4"
 			precision="0"
-			dataLabel="@Strings.fit_game_score_player_2_label"
-			unitLabel="@Strings.fit_score_unit_label" />
+			dataLabel="@Strings.fit_game_game_time"
+			unitLabel="@Strings.fit_game_time_unit" />
     <fitField
 			id="3"
 			displayInChart="false"
 			displayInActivityLaps="false"
 			displayInActivitySummary="true"
-			sortOrder="3"
-			precision="0"
-			dataLabel="@Strings.fit_calories_burned_label"
-			unitLabel="@Strings.fit_calories_unit" />
-    <fitField
-			id="4"
-			displayInChart="false"
-			displayInActivityLaps="false"
-			displayInActivitySummary="true"
-			sortOrder="4"
+			sortOrder="1"
 			precision="0"
 			dataLabel="@Strings.fit_steps_taken_label"
 			unitLabel="@Strings.fit_steps_unit" />

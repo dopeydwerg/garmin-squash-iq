@@ -8,6 +8,7 @@ module Helpers {
 	//TODO use Lang.format instead
 	function formatString(string, parameters) {
 		var result = string;
+    Sys.println(result);
 		var parameters_keys = parameters.keys();
 		//compiler does no accept for loop without incrementation phase
 		var i;

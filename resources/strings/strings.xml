@@ -39,12 +39,14 @@
   <string id="fit_game_number">Game</string>
   <string id="fit_game_unit_label">Game</string>
   <string id="fit_score_unit_label">points</string>
-  <string id="fit_game_score_player_1_label">Your score for the game</string>
-  <string id="fit_game_score_player_2_label">Opponent score for the game</string>
+  <string id="fit_game_score_player_1_label">You</string>
+  <string id="fit_game_score_player_2_label">Opponent</string>
+  <string id="fit_game_game_time">Time</string>
   <string id="fit_calories_burned_label">Calories burned</string>
   <string id="fit_calories_unit">Cals</string>
   <string id="fit_steps_taken_label">Total steps</string>
   <string id="fit_steps_unit">Steps</string>
+  <string id="fit_game_time_unit">minutes</string>
 
   <string id="menu_label_1">Item 1</string>
   <string id="menu_label_2">Item 2</string>

@@ -23,9 +23,6 @@ class GameResultView extends Ui.View {
 		//draw set score
 		var score_text = game.getScore(:player_1).toString() + " - " + game.getScore(:player_2).toString();
 		findDrawableById("game_result_score").setText(score_text);
-		//draw rallies
-		var rallies_text = Ui.loadResource(Rez.Strings.game_end_rallies);
-		findDrawableById("game_result_rallies").setText(Helpers.formatString(rallies_text, {"rallies" => game.getRalliesNumber().toString()}));
     //draw elapsed time
     var elapsed_time_text = Ui.loadResource(Rez.Strings.game_end_elpased);
     findDrawableById("game_result_lapsed_time").setText(Helpers.formatString(elapsed_time_text, {"elapsed_time" => game.getElapsedTime().toString()}));

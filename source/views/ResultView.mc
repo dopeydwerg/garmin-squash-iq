@@ -1,6 +1,7 @@
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
+using Toybox.Application as App;
 
 class SaveMatchConfirmationDelegate extends Ui.ConfirmationDelegate {
 
@@ -34,7 +35,14 @@ class ResultView extends Ui.View {
 	function onShow() {
 		//draw end of match text
 		var winner = $.match.getWinner();
-		var won_text = Ui.loadResource(winner == :player_1 ? Rez.Strings.end_you_won : Rez.Strings.end_opponent_won);
+    var won_text;
+    if (winner == :player_1) {
+      won_text = Ui.loadResource(Rez.Strings.end_you_won);
+    } else {
+      var opponent_name = App.getApp().getProperty("opponent_name");
+      won_text = Helpers.formatString(Ui.loadResource(Rez.Strings.end_opponent_won), {"opponent" => opponent_name});
+    }
+    
 		findDrawableById("result_won_text").setText(won_text);
 		//draw match score or last set score
 		var score_text = $.match.getGamesWon(:player_1).toString() + " - " + $.match.getGamesWon(:player_2).toString();

@@ -9,11 +9,10 @@ var dataTracker;
 
 class Match {
 
-  const FIT_GAME_NUMBER_FIELD_ID = 0;
-  const FIT_GAME_SCORE_PLAYER_1_ID = 1;
-  const FIT_GAME_SCORE_PLAYER_2_ID = 2;
-  const FIT_STATS_CALORIES_FIELD_ID = 3;
-  const FIT_STATS_STEPS_FIELD_ID = 4;
+  const FIT_GAME_SCORE_PLAYER_1_ID = 0;
+  const FIT_GAME_SCORE_PLAYER_2_ID = 1;
+  const FIT_GAME_TIME_ID = 2;
+  const FIT_STATS_STEPS_FIELD_ID = 3;
 
   hidden var started = false;
   hidden var manually_finished = false;
@@ -25,26 +24,25 @@ class Match {
 	hidden var winner; //store the winner of the match, :player_1 or :player_2
 
   hidden var session;
-	hidden var session_field_game_number;
   hidden var session_field_game_score_player_1;
   hidden var session_field_game_score_player_2;
+  hidden var session_field_game_time;
   hidden var session_field_stats_calories;
   hidden var session_field_stats_steps;
 
   function initialize(games_to_play,  match_beginner)  {
     // prepare the Games
-    games = new [games_to_play];
-    for (var i = 0; i < games_to_play; i++) {
-      games[i] = -1;
-    }
+    games = new List();
+    // for (var i = 0; i < games_to_play; i++) {
+    //   games.get(i) = -1;
+    // }
 
     session = Recording.createSession({:sport => Recording.SPORT_TENNIS, :subSport => Recording.SUB_SPORT_MATCH, :name => Ui.loadResource(Rez.Strings.fit_activity_name)});
 
-    session_field_game_number = session.createField("fit_game_number", FIT_GAME_NUMBER_FIELD_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_LAP, :units => Ui.loadResource(Rez.Strings.fit_game_unit_label)});
-    session_field_game_score_player_1 = session.createField("fit_game_score_player_1_label", FIT_GAME_SCORE_PLAYER_1_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_LAP, :units => Ui.loadResource(Rez.Strings.fit_score_unit_label)});
-    session_field_game_score_player_2 = session.createField("fit_game_score_player_2_label", FIT_GAME_SCORE_PLAYER_2_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_LAP, :units => Ui.loadResource(Rez.Strings.fit_score_unit_label)});
-    session_field_stats_calories = session.createField("fit_calories_burned_label", FIT_STATS_CALORIES_FIELD_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.fit_calories_unit)});
-    session_field_stats_steps = session.createField("fit_calories_burned_label", FIT_STATS_STEPS_FIELD_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.fit_steps_unit)});
+    session_field_game_score_player_1 = session.createField("score_you", FIT_GAME_SCORE_PLAYER_1_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_LAP, :units => Ui.loadResource(Rez.Strings.fit_score_unit_label)});
+    session_field_game_score_player_2 = session.createField("score_opponent", FIT_GAME_SCORE_PLAYER_2_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_LAP, :units => Ui.loadResource(Rez.Strings.fit_score_unit_label)});
+    session_field_game_time = session.createField("game_time", FIT_GAME_TIME_ID, Contributor.DATA_TYPE_DOUBLE, {:mesgType => Contributor.MESG_TYPE_LAP, :units => Ui.loadResource(Rez.Strings.fit_game_time_unit)});
+    session_field_stats_steps = session.createField("steps", FIT_STATS_STEPS_FIELD_ID, Contributor.DATA_TYPE_SINT8, {:mesgType => Contributor.MESG_TYPE_SESSION, :units => Ui.loadResource(Rez.Strings.fit_steps_unit)});
 
     session.start();
     // Also initialize the datatracker here so it won't get reset every time
@@ -52,11 +50,14 @@ class Match {
   }
 
   function start(match_beginner) {
-    // Start new lap first lap was for warming up
+    // Start new lap first lap was for warming up//manage activity session
+		session_field_game_score_player_1.setData(0);
+		session_field_game_score_player_2.setData(0);
+    session_field_game_time.setData(0.0);
     session.addLap();
 
     started = true;
-    games[0] = new MatchGame(match_beginner);
+    games.push(new MatchGame(match_beginner));
     server = match_beginner;
     currentServe = 1;
   }
@@ -69,7 +70,7 @@ class Match {
 		var i = getCurrentGameIndex();
 
 		//create next set
-		games[i +1] = new MatchGame(_beginner);
+		games.push(new MatchGame(_beginner));
 	}
 
   function isStarted() { 
@@ -88,11 +89,7 @@ class Match {
 	}
 
 	function getCurrentGameIndex() {
-		var i = 0;
-		while(i < games.size() && games[i] != -1) {
-			i++;
-		}
-		return i - 1;
+		return games.size() - 1;
 	}
 
   function getCurrentServerInfo() {
@@ -100,7 +97,7 @@ class Match {
   }
 
 	function getCurrentGame() {
-		return games[getCurrentGameIndex()];
+		return games.last();
 	}
 
   function scorePlayer(scorer) {
@@ -115,9 +112,9 @@ class Match {
         game.end(game_winner);
 
         //manage activity session
-        session_field_game_number.setData(getCurrentGameIndex() + 1);
 				session_field_game_score_player_1.setData(game.getScore(:player_1));
 				session_field_game_score_player_2.setData(game.getScore(:player_2));
+        session_field_game_time.setData(game.getElapsedTime().toDouble());
 
         var match_winner = isMatchWon();
         if (match_winner != null) {
@@ -165,7 +162,7 @@ class Match {
   function getGamesWon(player) {
     var won = 0;
     for (var i = 0; i <= getCurrentGameIndex(); i++) {
-      if (games[i].getWinner() == player) {
+      if (games.get(i).getWinner() == player) {
         won++;
       }
     }
@@ -196,8 +193,8 @@ class Match {
   function getTotalRalliesNumber() {
 		var i = 0;
 		var number = 0;
-		while(i < games.size() && games[i] != -1) {
-			number += games[i].getRalliesNumber();
+		while(i < games.size() && games.get(i) != -1) {
+			number += games.get(i).getRalliesNumber();
 			i++;
 		}
 		return number;
@@ -206,7 +203,7 @@ class Match {
 	function getTotalScore(player) {
 		var score = 0;
 		for(var i = 0; i <= getCurrentGameIndex(); i++) {
-			score = score + games[i].getScore(player);
+			score = score + games.get(i).getScore(player);
 		}
 		return score;
 	}
@@ -228,7 +225,6 @@ class Match {
   function save() {
 		//session can only be save once
     var stats = $.dataTracker.getCurrentData();
-    session_field_stats_calories.setData(stats[:caloriesBurned]);
     session_field_stats_steps.setData(stats[:stepsTaken]);
 		session.save();
 	}

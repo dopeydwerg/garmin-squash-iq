@@ -5,6 +5,7 @@ using Toybox.System as Sys;
 using Toybox.Attention as Attention;
 using Toybox.Lang;
 using Toybox.Timer as Timer;
+using Toybox.Communications as Comm;
 
 var config;
 
@@ -13,7 +14,10 @@ class InitialView extends Ui.View {
   hidden var ticks = 0;
   hidden var dots = ".";
 
-  function initialize() { View.initialize(); }
+  function initialize() { 
+    Comm.registerForPhoneAppMessages(method(:onMail));
+    View.initialize();
+  }
 
   function onShow() {
     Sys.println("Showing InitialView");
@@ -77,6 +81,25 @@ class InitialView extends Ui.View {
                 App.getApp().getProperty("opponent_name"),
                 Gfx.TEXT_JUSTIFY_CENTER);
   }
+
+  // #region companion stuff
+  function onMail(mailIter) {
+    
+    var mail;
+    mail = mailIter.next();
+    Comm.emptyMailbox();
+    if (mail != null) {
+      App.getApp().setProperty("opponent_name", "Received mail");
+    }
+
+    Ui.requestUpdate();
+  }
+
+  function phoneMessageCallback(msg) {
+    message = msg.data;
+
+    Ui.requestUpdate();
+  }
 }
 
 class InitialViewDelegate extends Ui.BehaviorDelegate {
@@ -84,8 +107,7 @@ class InitialViewDelegate extends Ui.BehaviorDelegate {
 
   function onBack() {
     // pop the main view to close the application
-    Sys.println("We're definitely not doing this right now");
-    Ui.requestUpdate();
+    Ui.popView(Ui.SLIDE_IMMEDIATE);
     return true;
   }
 

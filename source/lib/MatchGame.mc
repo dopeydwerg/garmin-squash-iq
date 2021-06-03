@@ -47,56 +47,31 @@ class MatchGame {
   }
 
   function getCurrentServerInfo() {
-    if (rallies.isEmpty()) {
+    if (getRalliesNumber() == getScore(beginner)) {
       return {
         :server => beginner,
-        :serve => 1
+        :serve => getRalliesNumber() + 1
       };
     }
 
-    if (getRalliesNumber() == 2) {
-      if (rallies.get(1) != rallies.get(0)) {
+    var current = rallies.last();
+    var count = 1;
+    Sys.println("totalrallies = " + getRalliesNumber());
+    for (var i = getRalliesNumber() - 2; i >= 0; i--) {
+      var previous = rallies.get(i);
+      Sys.println(Lang.format("current = $1$ previous $2$ i = $3$", [current == :player_1 ? "p_1" : "p_2", previous == :player_1 ? "p_1" : "p_2", i]));
+      if (current != previous) {
         return {
-          :server => rallies.get(1),
-          :serve => 1
+          :server => current,
+          :serve => count
         };
       }
+      count++;
     }
 
-    var server = rallies.last();
-    Sys.println(server == :player_1 ? "server = player 1" : "server = player 2");
-    var serve = 0;
-    var counter = getRalliesNumber() - 1;
-    Sys.println("counter = : " + counter);
-    var current = rallies.get(counter);
-    Sys.println(current == :player_1 ? "current = player 1" : "current = player 2");
-    if (current != server) {
-      return {
-        :server => server,
-        :serve => 1
-      };
-    }
-
-    while (current == server && counter > 0) {
-      serve++;
-      counter--;
-      current = rallies.get(counter);
-      Sys.println(current == :player_1 ? "current = player 1" : "current = player 2");
-    }
-
-    // for some reason this needs to be handled else the count is off
-    if (counter == 0 && server == beginner && getRalliesNumber() <= 2) {
-      serve++;
-      serve++;
-    }
-    
-    if (counter == 0 && server != beginner) {
-      serve++;
-    }
-    
     return {
-      :server => server,
-      :serve => serve
+      :server => current,
+      :serve => count
     };
   }
 
@@ -110,11 +85,9 @@ class MatchGame {
     Sys.println("elapsed seconds : " + elapsedTime);
     var minutes = Math.floor(elapsedTime / 60);
     Sys.println("minutes are : " + minutes);
-    if (!minutes) {
-      minutes = 0;
-    }
-    var seconds = (elapsedTime - (minutes * 60));
-    return Lang.format("$1$:$2$", [minutes, seconds.format("%02d")]);
+    var secondsLeft = elapsedTime - (minutes * 60);
+    Sys.println("secondsLeft = " + secondsLeft);
+    return Lang.format("$1$.$2$", [minutes.format("%2d"), secondsLeft.format("%02d")]);
   }
 
   function getScore(player) {
