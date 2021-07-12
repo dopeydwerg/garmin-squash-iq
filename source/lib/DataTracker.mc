@@ -8,7 +8,7 @@ class DataTracker {
   hidden var initialCalories;
 
   function initialize() {
-  Sys.println("Doing this tracker initialize thing");
+    Sys.println("Doing this tracker initialize thing");
     restart();
   }
 
@@ -28,8 +28,9 @@ class DataTracker {
 
   function getCurrentData() {
     update();
+    var activityInfo = Monitor.getInfo();
     return {
-      :stepsTaken => numberOfStepsTaken,
+      :stepsTaken => activityInfo.steps - initialSteps,
       :caloriesBurned => numberOfCaloriesBurned
     };
   }

@@ -1,6 +1,7 @@
 <resources>
   <properties>
     <property id="opponent_name" type="string">Opp</property>
+    <property id="opponent_id" type="number">0</property>
     <property id="match_type" type="number">0</property>
     <property id="games_to_play" type="number">10</property>
   </properties>

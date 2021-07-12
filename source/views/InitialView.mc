@@ -6,23 +6,27 @@ using Toybox.Attention as Attention;
 using Toybox.Lang;
 using Toybox.Timer as Timer;
 using Toybox.Communications as Comm;
+using Toybox.Application.Storage as Storage;
 
 var config;
 
 class InitialView extends Ui.View {
-  hidden var refreshTimer = new Timer.Timer();
-  hidden var ticks = 0;
-  hidden var dots = ".";
+    hidden var refreshTimer = new Timer.Timer();
+    hidden var ticks = 0;
+    hidden var dots = ".";
+    hidden var mTransferSuccessMessage, mTransferFailedMessage;
 
-  function initialize() { 
-    Comm.registerForPhoneAppMessages(method(:onMail));
+  function initialize() {
+    // Comm.setMailboxListener(method(:onMail));
+    Comm.registerForPhoneAppMessages(method( :onPhoneMessageCallback));
     View.initialize();
   }
 
   function onShow() {
     Sys.println("Showing InitialView");
     // App.getApp().setProperty("opponent_name", "value");
-    refreshTimer.start(method(:refresh), 1000, true);
+    var message = "test";
+    refreshTimer.start(method( :refresh), 1000, true);
   }
 
   function onHide() {
@@ -36,11 +40,10 @@ class InitialView extends Ui.View {
     dots = "";
     var counter = 0;
     do {
-      dots += "."; 
+      dots += ".";
       counter++;
-    } 
-    while (counter <= ticks % 3);
-    Sys.println("refreshing this thing " + ticks + " " + dots);
+    } while (counter <= ticks % 3);
+    //Sys.println("refreshing this thing " + ticks + " " + dots);
     Ui.requestUpdate();
   }
 
@@ -68,7 +71,8 @@ class InitialView extends Ui.View {
     } else {
       typeLabel = Ui.loadResource(Rez.Strings.press_continue_label);
     }
-    dc.drawText(width / 2, height - ((height * 0.25)), Gfx.FONT_TINY, dots + typeLabel + dots, Gfx.TEXT_JUSTIFY_CENTER);
+    dc.drawText(width / 2, height - ((height * 0.25)), Gfx.FONT_TINY,
+                dots + typeLabel + dots, Gfx.TEXT_JUSTIFY_CENTER);
 
     // Center opponent part
     dc.setColor((backgroundColor == Gfx.COLOR_BLACK) ? Gfx.COLOR_WHITE
@@ -84,7 +88,6 @@ class InitialView extends Ui.View {
 
   // #region companion stuff
   function onMail(mailIter) {
-    
     var mail;
     mail = mailIter.next();
     Comm.emptyMailbox();
@@ -94,22 +97,36 @@ class InitialView extends Ui.View {
 
     Ui.requestUpdate();
   }
-
-  function phoneMessageCallback(msg) {
+  var message = new Comm.PhoneAppMessage();
+  function onPhoneMessageCallback(msg) {
     message = msg.data;
+    var type = message.get(SquashItConstants.KEY_MESSAGE_TYPE);
+    var payload = message.get(SquashItConstants.KEY_MESSAGE_PAYLOAD);
+
+    if (type == SquashItConstants.MESSAGE_TYPE_PLAYER_INFO) {
+        App.getApp().setProperty("opponent_name", message);
+        App.getApp().setProperty("opponent_id", message);
+    }
 
     Ui.requestUpdate();
+    return true;
   }
 }
 
 class InitialViewDelegate extends Ui.BehaviorDelegate {
-  function initialize(view) { BehaviorDelegate.initialize(); }
+    hidden var lastUsedScreen;
 
-  function onBack() {
-    // pop the main view to close the application
-    Ui.popView(Ui.SLIDE_IMMEDIATE);
-    return true;
-  }
+    function initialize(view) {
+        BehaviorDelegate.initialize();
+        lastUsedScreen = Storage.getValue("lastUsedScreen");
+        Sys.println(lastUsedScreen);
+    }
+
+    function onBack() {
+        Ui.pushView(new Ui.Confirmation(Ui.loadResource(Rez.Strings.confirm_exit)),
+            new ExitConfirmationDelegate(), Ui.SLIDE_IMMEDIATE);
+        return true;
+    }
 
   function onTap(event) {
     var center = $.device.screenHeight / 2;
@@ -120,11 +137,18 @@ class InitialViewDelegate extends Ui.BehaviorDelegate {
   function onKey(keyEvent) {
     if (keyEvent.getKey() == KEY_ENTER) {
       Sys.println("Starting the game!!");
-      $.bus.dispatch(new BusEvent(:vibrate, 200));
+      $.bus.dispatch(new BusEvent( :vibrate, 200));
       var num_games = App.getApp().getProperty("games_to_play");
-      $.match = new Match(num_games, :player_1);
-      var matchView = new MatchView();
-      Ui.switchToView(matchView, new MatchViewDelegate(matchView), Ui.SLIDE_IMMEDIATE);
+      $.match = new Match(num_games, App.getApp().getProperty("opponent_name"), 0);
+      if (lastUsedScreen == "MatchView") {
+            var matchView = new MatchView();
+            Ui.switchToView(matchView, new MatchViewDelegate(),
+                              Ui.SLIDE_IMMEDIATE);
+        } else {
+            var matchViewFocus = new MatchViewFocus();
+            Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
+                              Ui.SLIDE_IMMEDIATE);
+        }
     } else {
       Sys.println("Nothing to do here! Moving on!");
     }
@@ -135,5 +159,21 @@ class InitialViewDelegate extends Ui.BehaviorDelegate {
   function onStart(state) { Sys.println("doing this thingy"); }
 
   function onMenu() { Sys.println("Opening the settings view"); }
+}
 
+//! Delegate that handles the event from the Confirmation dialog
+//! that appears before quitting the App.
+class ExitConfirmationDelegate extends Ui.ConfirmationDelegate {
+
+    function initialize() {
+        ConfirmationDelegate.initialize();
+    }
+
+    //! Event that happens on response of the user.
+    //! When the user replies YES, then the App exits.
+    function onResponse(response) {
+        if (response == CONFIRM_YES) {
+            System.exit();
+        }
+    }
 }

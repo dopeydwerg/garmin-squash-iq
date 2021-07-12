@@ -8,22 +8,22 @@ using Toybox.Math as Math;
 
 class MatchGame {
 
-	hidden var beginner; //store the beginner of the Game, :player_1 or :player_2
+    hidden var beginner; //store the beginner of the Game, :player_1 or :player_2
 
-	hidden var rallies; //list of all rallies
+    hidden var rallies; //list of all rallies
 
-	hidden var scores; //dictionnary containing players current scores
-	hidden var winner; //store the winner of the match, :player_1 or :player_2
+    hidden var scores; //dictionnary containing players current scores
+    hidden var winner; //store the winner of the match, :player_1 or :player_2
 
   hidden var startTime;
   hidden var finishTime;
 
-	function initialize(player) {
-		beginner = player;
-		rallies = new List();
-		scores = {:player_1 => 0, :player_2 => 0};
+    function initialize(player) {
+        beginner = player;
+        rallies = new List();
+        scores = {:player_1 => 0, :player_2 => 0};
     startTime = Time.now();
-	}
+    }
 
   function score(player) {
     if (!hasEnded()) {
@@ -34,12 +34,12 @@ class MatchGame {
   }
 
   function undo() {
-		if(rallies.size() > 0) {
-			winner = null;
-			var rally = rallies.pop();
-			scores[rally]--;
-		}
-	}
+        if(rallies.size() > 0) {
+            winner = null;
+            var rally = rallies.pop();
+            scores[rally]--;
+        }
+    }
 
   function end(player) {
     winner = player;
@@ -56,10 +56,10 @@ class MatchGame {
 
     var current = rallies.last();
     var count = 1;
-    Sys.println("totalrallies = " + getRalliesNumber());
+    //Sys.println("totalrallies = " + getRalliesNumber());
     for (var i = getRalliesNumber() - 2; i >= 0; i--) {
       var previous = rallies.get(i);
-      Sys.println(Lang.format("current = $1$ previous $2$ i = $3$", [current == :player_1 ? "p_1" : "p_2", previous == :player_1 ? "p_1" : "p_2", i]));
+      //Sys.println(Lang.format("current = $1$ previous $2$ i = $3$", [current == :player_1 ? "p_1" : "p_2", previous == :player_1 ? "p_1" : "p_2", i]));
       if (current != previous) {
         return {
           :server => current,
@@ -76,7 +76,7 @@ class MatchGame {
   }
 
   function getElapsedTime() {
-    var endTime = Time.now();   
+    var endTime = Time.now();
     Sys.println(endTime);
     if (finishTime) {
       endTime = finishTime;
@@ -92,6 +92,19 @@ class MatchGame {
 
   function getScore(player) {
     return scores[player];
+  }
+
+  function getGameStats() {
+    var ralliesPlayed = new [getRalliesNumber()];
+    for (var i = 0; i < rallies.size(); i++) {
+      ralliesPlayed[i] = rallies.get(i) == :player_1 ? SquashItConstants.YOU : SquashItConstants.OPP;
+    }
+    return {
+      SquashItConstants.KEY_GAME_DURATION => getElapsedTime(),
+      SquashItConstants.KEY_GAME_BEGINNER => beginner == :player_1 ? SquashItConstants.YOU : SquashItConstants.OPP,
+      SquashItConstants.KEY_GAME_WINNER => winner == :player_1 ? SquashItConstants.YOU : SquashItConstants.OPP,
+      SquashItConstants.KEY_GAME_RALLIES => ralliesPlayed
+    };
   }
 
   function getRalliesNumber() {

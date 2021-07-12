@@ -7,7 +7,7 @@ module MatchTest {
   (:test)
   function testServerInfo(logger) {
     var currentServeInfo;
-    var match = new Match(5, :player_1);
+    var match = new Match(5, :player_1, 0);
     match.start(:player_1);
 
     currentServeInfo = match.getCurrentServerInfo();
@@ -38,7 +38,7 @@ module MatchTest {
   (:test)
   function testServerInfoWithP2TakingFirstPoint(logger) {
     var currentServeInfo;
-    var match = new Match(5, :player_1);
+    var match = new Match(5, :player_1, 0);
     match.start(:player_1);
 
     currentServeInfo = match.getCurrentServerInfo();
@@ -69,7 +69,7 @@ module MatchTest {
   (:test)
   function testServerInfoWithP2TakingFirstPointAndP1TakingSecondPoint(logger) {
     var currentServeInfo;
-    var match = new Match(5, :player_1);
+    var match = new Match(5, :player_1, 0);
     match.start(:player_1);
 
     currentServeInfo = match.getCurrentServerInfo();
@@ -115,6 +115,48 @@ module MatchTest {
     BetterTest.assertEqual(currentServeInfo[:serve], 2, "Player 2 should be on serve 2 but is on serve: " + currentServeInfo[:serve]); 
 
     return true;
+  }
+  
+  (:test)
+  function testMatchWinner(logger) {
+    var match = new Match(5, :player_1, 0);
+    match.start(:player_1);
+    
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    
+    match.nextGame(:player_2);
+    
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_1);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    match.scorePlayer(:player_2);
+    
+    match.finish();
+    
+    var winner = match.getWinner();
+    Sys.println("winner = " + winner);
+    
+    var stats = match.getMatchStats();
+    Sys.println(stats);
   }
 
   (:test)

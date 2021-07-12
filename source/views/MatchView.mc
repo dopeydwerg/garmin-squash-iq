@@ -6,11 +6,12 @@ using Toybox.Attention as Attention;
 using Toybox.Lang;
 using Toybox.Timer as Timer;
 using Toybox.Sensor as Sensor;
+using Toybox.Application.Storage as Storage;
 
-var boundaries; 
+var boundaries;
 
 class MatchView extends Ui.View {
-  
+
   // Variables
   hidden var  timer;
   hidden var currentHeartRate;
@@ -24,8 +25,9 @@ class MatchView extends Ui.View {
   hidden const STATS_LABEL_FONT = Gfx.FONT_XTINY;
   hidden const STATS_VALUE_FONT = Gfx.FONT_NUMBER_MILD;
 
-  function initialize() { 
-    View.initialize(); 
+  function initialize() {
+    View.initialize();
+    Storage.setValue("lastUsedScreen", "MatchView");
 
     timer = new Timer.Timer();
     $.boundaries = getBoundaries();
@@ -34,8 +36,8 @@ class MatchView extends Ui.View {
     Sensor.enableSensorEvents(method(:onSensor));
   }
 
-  function onLayout(dc) { 
-    setLayout(Rez.Layouts.MainLayout(dc)); 
+  function onLayout(dc) {
+    setLayout(Rez.Layouts.MainLayout(dc));
   }
 
   function testJe(player) {
@@ -83,8 +85,6 @@ class MatchView extends Ui.View {
     dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
     dc.drawText($.device.screenWidth * 0.33 / 2 + 20, $.device.screenHeight * 0.825 - 20, Gfx.FONT_MEDIUM, "You", textVCenter);
 
-    
-    
     // :player_2
     dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
     dc.fillRectangle($.device.screenWidth * 0.66, $.device.screenHeight * 0.66, $.device.screenWidth * 0.33, $.device.screenHeight * 0.33);
@@ -171,20 +171,18 @@ class MatchView extends Ui.View {
 }
 
 class MatchViewDelegate extends Ui.BehaviorDelegate {
-  hidden var view;
 
-  function initialize(_view) { 
-    view = _view;
-    BehaviorDelegate.initialize(); 
+  function initialize() {
+    BehaviorDelegate.initialize();
   }
 
   function onBack() {
     $.bus.dispatch(new BusEvent(:vibrate, 200));
     if($.match.getTotalRalliesNumber() > 0) {
-			//undo last rally
-			$.match.undo();
-			Ui.requestUpdate();
-		} else {
+        //undo last rally
+        $.match.undo();
+        Ui.requestUpdate();
+    } else {
       $.match.discard();
       var view = new InitialView();
       Ui.switchToView(view, new InitialViewDelegate(view), Ui.SLIDE_IMMEDIATE);
@@ -198,16 +196,16 @@ class MatchViewDelegate extends Ui.BehaviorDelegate {
       Ui.requestUpdate();
       return;
     }
-    
+
     $.match.scorePlayer(player);
-		var winner = $.match.getCurrentGame().getWinner();
-		if(winner != null) {
-			Ui.switchToView(new GameResultView(), new GameResultViewDelegate(), Ui.SLIDE_IMMEDIATE);
-		}
-		else {
-      $.bus.dispatch(new BusEvent(:vibrate, 200));
-			Ui.requestUpdate();
-		}
+        var winner = $.match.getCurrentGame().getWinner();
+        if(winner != null) {
+            Ui.switchToView(new GameResultView(), new GameResultViewDelegate(), Ui.SLIDE_IMMEDIATE);
+        }
+        else {
+    $.bus.dispatch(new BusEvent(:vibrate, 200));
+        Ui.requestUpdate();
+    }
   }
 
   function whichButtonWasPressed(coords) {
@@ -240,8 +238,9 @@ class MatchViewDelegate extends Ui.BehaviorDelegate {
     }
   }
 
-  function onRelax() {
-    Sys.println("Hello is this working");
-    view.testJe(:player_1);
+  function onNextPage() {
+    var matchViewFocus = new MatchViewFocus();
+      Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
+                      Ui.SLIDE_IMMEDIATE);
   }
 }

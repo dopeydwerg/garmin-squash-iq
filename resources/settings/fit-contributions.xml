@@ -24,7 +24,7 @@
 			displayInActivityLaps="true"
 			displayInActivitySummary="false"
 			sortOrder="4"
-			precision="0"
+			precision="2"
 			dataLabel="@Strings.fit_game_game_time"
 			unitLabel="@Strings.fit_game_time_unit" />
     <fitField

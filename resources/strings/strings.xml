@@ -48,6 +48,16 @@
   <string id="fit_steps_unit">Steps</string>
   <string id="fit_game_time_unit">minutes</string>
 
-  <string id="menu_label_1">Item 1</string>
-  <string id="menu_label_2">Item 2</string>
+  <string id="menu_label_1">Continue</string>
+  <string id="menu_label_2">Finish</string>
+  <string id="menu_label_3">Discard</string>
+
+  <string id="player_menu_title">Who Starts</string>
+  <string id="player_menu_item_you">You</string>
+  <string id="player_menu_item_random">Random</string>
+  
+	<string id="text_transfer_success">Transfer Succeeded</string>
+	<string id="text_transfer_failure">Transfer Failed</string>
+	
+	<string id="confirm_exit">Are you sure you want to quit</string>
 </strings>
