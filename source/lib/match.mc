@@ -117,8 +117,8 @@ class Match {
         game.end(game_winner);
 
         //manage activity session
-                session_field_game_score_player_1.setData(game.getScore(:player_1));
-                session_field_game_score_player_2.setData(game.getScore(:player_2));
+        session_field_game_score_player_1.setData(game.getScore(:player_1));
+        session_field_game_score_player_2.setData(game.getScore(:player_2));
         session_field_game_time.setData(game.getElapsedTime().toDouble());
 
         var match_winner = isMatchWon();
@@ -130,6 +130,18 @@ class Match {
       }
     }
   }
+
+    function forceGameFinish() {
+        var game = getCurrentGame();
+
+        var game_winner = game.getScore(:player_1) > game.getScore(:player_2) ? :player_1 : :player_2;
+        game.end(game_winner);
+
+        //manage activity session
+        session_field_game_score_player_1.setData(game.getScore(:player_1));
+        session_field_game_score_player_2.setData(game.getScore(:player_2));
+        session_field_game_time.setData(game.getElapsedTime().toDouble());
+    }
 
   function undo() {
         winner = null;

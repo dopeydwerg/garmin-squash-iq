@@ -19,6 +19,7 @@
   <string id="game_end_opponent_won">Game lost!</string>
   <string id="game_end_rallies">${rallies} rallies</string>
   <string id="game_end_elpased">${elapsed_time} game time</string>
+  <string id="game_end_steps">${steps_taken} steps</string>
   <string id="game_end_what_next">Next server or finish!</string>
 
   <string id="end_you_won">You won!</string>
@@ -55,6 +56,13 @@
   <string id="player_menu_title">Who Starts</string>
   <string id="player_menu_item_you">You</string>
   <string id="player_menu_item_random">Random</string>
+  
+  <string id="pause_menu_title">Pause</string>
+  <string id="pause_menu_continue">Continue</string>
+  <string id="pause_menu_finish">Finish game (save)</string>
+  <string id="pause_menu_discard">Discard (no save)</string>
+  <string id="pause_menu_confirmation_discard">Are you sure you want to \ndiscard the current activity</string>
+  <string id="pause_menu_confirmation_finish">Are you sure you want to \nfinish the current game</string>
   
 	<string id="text_transfer_success">Transfer Succeeded</string>
 	<string id="text_transfer_failure">Transfer Failed</string>

@@ -9,6 +9,8 @@ using Toybox.Sensor as Sensor;
 using Toybox.Application.Storage as Storage;
 using Toybox.Math as Mt;
 
+var playerBtnDimensions;
+
 class MatchViewFocus extends Ui.View {
 
     //! Vertical place in the screen where we start
@@ -19,7 +21,7 @@ class MatchViewFocus extends Ui.View {
     hidden var currentHR;
     hidden var elapsedTime = "00:00";
     hidden const textCenter = Gfx.TEXT_JUSTIFY_CENTER;
-    hidden const STATS_LABEL_FONT = Gfx.FONT_XTINY;
+    hidden const STATS_LABEL_FONT = Gfx.FONT_TINY;
     hidden const STATS_VALUE_FONT = Gfx.FONT_NUMBER_MILD;
 
     //! Array of 2 buttons containing the player 1 and player 2
@@ -28,6 +30,7 @@ class MatchViewFocus extends Ui.View {
 
     function initialize() {
         View.initialize();
+        Sys.println("Initialized MatchViewFocus" );
 
         Storage.setValue("lastUsedScreen", "MatchViewFocus");
 
@@ -35,7 +38,16 @@ class MatchViewFocus extends Ui.View {
         Sensor.enableSensorEvents(method(:onSensor));
     }
 
+    function onShow() {
+        if ($.match.isStarted()) {
+            if ($.match.getCurrentGame().getWinner()) {
+                Ui.switchToView(new GameResultView(), new GameResultViewDelegate(), Ui.SLIDE_IMMEDIATE);
+            }
+        }
+    }
+
     function onLayout(dc) {
+        Sys.println("Onlayout");
         initialY = AppConstants.EXTRA_VERTICAL_SPACING;
 
         segmentHeight = (dc.getHeight() - (initialY * 2) - (AppConstants.HORIZONTAL_SPACING * 2)) / 3;
@@ -90,6 +102,7 @@ class MatchViewFocus extends Ui.View {
         //! Update the view
     function onUpdate(dc) {
         // Call the parent onUpdate function to redraw the layout
+        setPlayerButtonColors();
         View.onUpdate(dc);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
         dc.setPenWidth(2);
@@ -99,8 +112,9 @@ class MatchViewFocus extends Ui.View {
         var y = initialY;
 
         // First segment
-        drawHeartRate(dc);
-
+        drawHeartRate(dc, ScreenRegion.TOP_LEFT);
+        dc.drawLine(dc.getWidth() / 2, 0, dc.getWidth() / 2, dc.getHeight() / 3);
+        drawCalories(dc, ScreenRegion.TOP_RIGHT);
         // Second segment
         y = y + AppConstants.VERTICAL_SPACING + segmentHeight;
         if ($.match.isStarted()) {
@@ -110,7 +124,6 @@ class MatchViewFocus extends Ui.View {
             drawPlayerButton(dc, x, y, "YOU", game.getScore(:player_1), $.match.getGamesWon(:player_1), Gfx.TEXT_JUSTIFY_RIGHT, serveInfo[:server] == :player_1 ? serveInfo[:serve] : null);
             x = dc.getWidth() / 2 + AppConstants.HORIZONTAL_SPACING;
             drawPlayerButton(dc, x, y, "OPP", game.getScore(:player_2), $.match.getGamesWon(:player_2), Gfx.TEXT_JUSTIFY_LEFT, serveInfo[:server] == :player_2 ? serveInfo[:serve] : null);
-            setPlayerButtonColors();
         } else {
             dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
             dc.drawText(dc.getWidth() / 2, y, Gfx.FONT_SMALL, "Warming Up!!", Gfx.TEXT_JUSTIFY_CENTER);
@@ -120,20 +133,23 @@ class MatchViewFocus extends Ui.View {
         // Third segment
         y = y + AppConstants.VERTICAL_SPACING + segmentHeight + AppConstants.HORIZONTAL_SPACING;
         //dc.drawLine(0, y, dc.getWidth(), y);
-        dc.drawText(dc.getWidth() / 2, y, STATS_LABEL_FONT, "Game Stats", Gfx.TEXT_JUSTIFY_CENTER);
-        y = y + dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING;
-        dc.drawText(dc.getWidth() / 2, y, STATS_VALUE_FONT, elapsedTime, Gfx.TEXT_JUSTIFY_CENTER);
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_BLACK);
+        drawBottomLeft(dc);
+        dc.drawLine(dc.getWidth() / 2, dc.getHeight() / 3 * 2 - 6, dc.getWidth() / 2, dc.getHeight());
+        drawBottomRight(dc);
         y = y + (AppConstants.VERTICAL_SPACING / 2);
     }
 
     function setPlayerButtonColors() {
-        var serveInfo = $.match.getCurrentServerInfo();
-        if (serveInfo[:server] == :player_1) {
-            playerButtons[0].stateDefault = Gfx.COLOR_DK_GREEN;
-            playerButtons[1].stateDefault = Gfx.COLOR_WHITE;
-        } else {
-            playerButtons[1].stateDefault = Gfx.COLOR_DK_GREEN;
-            playerButtons[0].stateDefault = Gfx.COLOR_WHITE;
+        if ($.match.isStarted()) {
+            var serveInfo = $.match.getCurrentServerInfo();
+            if (serveInfo[:server] == :player_1) {
+                playerButtons[0].stateDefault = Gfx.COLOR_DK_GREEN;
+                playerButtons[1].stateDefault = Gfx.COLOR_WHITE;
+            } else {
+                playerButtons[1].stateDefault = Gfx.COLOR_DK_GREEN;
+                playerButtons[0].stateDefault = Gfx.COLOR_WHITE;
+            }
         }
     }
 
@@ -146,7 +162,6 @@ class MatchViewFocus extends Ui.View {
     //! @param highlighted  True if the button is highlighted
     hidden function drawPlayerButton(dc, x, y, label, score, games, justify, serveInfo){
         dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
-        dc.drawText(x, y, Gfx.FONT_TINY, label, justify);
 
         // Server info. Draw concurrent serves in a squashball
         if (serveInfo != null) {
@@ -154,8 +169,9 @@ class MatchViewFocus extends Ui.View {
             dc.fillCircle(serveX , y + 20, 20);
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
             dc.drawText(serveX, y, Gfx.FONT_TINY, serveInfo, Gfx.TEXT_JUSTIFY_CENTER);
-            dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
+            dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         }
+        dc.drawText(x, y, Gfx.FONT_TINY, label, justify);
         y = y + dc.getFontHeight(Gfx.FONT_TINY) + AppConstants.VERTICAL_SPACING;
         dc.drawText(x, y, Gfx.FONT_NUMBER_MEDIUM, score, justify);
         x = dc.getWidth() / 4;
@@ -167,11 +183,62 @@ class MatchViewFocus extends Ui.View {
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
     }
 
-    function drawHeartRate(dc) {
+    function drawHeartRate(dc, position) {
+        var justify = getJustifycation(position);
+        var x = dc.getWidth() / 2 + (justify == Gfx.TEXT_JUSTIFY_RIGHT ? - AppConstants.HORIZONTAL_SPACING : AppConstants.HORIZONTAL_SPACING);
+        var startY = getStartY(position);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
-        dc.drawText($.device.screenWidth / 2, AppConstants.EXTRA_VERTICAL_SPACING, STATS_LABEL_FONT, "HRM", textCenter);
-        var startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING;
-        dc.drawText($.device.screenWidth / 2, startY, STATS_VALUE_FONT, currentHR, textCenter);
+        dc.drawText(x, startY, STATS_LABEL_FONT, "HRM", justify);
+        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING;
+        dc.drawText(x, startY, STATS_VALUE_FONT, currentHR, justify);
+    }
+
+    function drawCalories(dc, position) {
+        var data = $.dataTracker.getCurrentData();
+        var justify = getJustifycation(position);
+        var x = dc.getWidth() / 2 + (justify == Gfx.TEXT_JUSTIFY_RIGHT ? - AppConstants.HORIZONTAL_SPACING : AppConstants.HORIZONTAL_SPACING);
+        var startY = getStartY(position);
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
+        dc.drawText(x, startY, STATS_LABEL_FONT, "CAL", justify);
+        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING;
+        dc.drawText(x, startY, STATS_VALUE_FONT, data[:caloriesBurned], justify);
+    }
+
+    function drawBottomLeft(dc) {
+        var y = dc.getHeight() - getStartY(ScreenRegion.BOTTOM_LEFT) - Gfx.getFontHeight(STATS_LABEL_FONT);
+        var justify = getJustifycation(ScreenRegion.BOTTOM_LEFT);
+        var x = dc.getWidth() / 2 - AppConstants.HORIZONTAL_SPACING;
+        dc.drawText(x, y, STATS_LABEL_FONT, "TIME", justify);
+        y = y - dc.getFontHeight(STATS_VALUE_FONT) - AppConstants.VERTICAL_SPACING - AppConstants.EXTRA_VERTICAL_SPACING;
+        dc.drawText(x, y, STATS_VALUE_FONT, elapsedTime, justify);
+    }
+
+    function drawBottomRight(dc) {
+        var y = dc.getHeight() - getStartY(ScreenRegion.BOTTOM_RIGHT) - Gfx.getFontHeight(STATS_LABEL_FONT);
+        var justify = getJustifycation(ScreenRegion.BOTTOM_RIGHT);
+        var x = dc.getWidth() / 2 + AppConstants.HORIZONTAL_SPACING;
+        dc.drawText(x, y, STATS_LABEL_FONT, "STEPS", justify);
+        y = y - dc.getFontHeight(STATS_VALUE_FONT) - AppConstants.VERTICAL_SPACING - AppConstants.EXTRA_VERTICAL_SPACING;
+        dc.drawText(x, y, STATS_VALUE_FONT, $.dataTracker.getCurrentData()[:stepsTaken], justify);
+    }
+
+    function getJustifycation(position) {
+        switch (position) {
+            case ScreenRegion.TOP_RIGHT:
+            case ScreenRegion.BOTTOM_RIGHT:
+                return Gfx.TEXT_JUSTIFY_LEFT;
+            default:
+                return Gfx.TEXT_JUSTIFY_RIGHT;
+        }
+        return Gfx.TEXT_JUSTIFY_CENTER;
+    }
+
+    function getStartY(position) {
+        var initialY = AppConstants.EXTRA_VERTICAL_SPACING;
+        if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND && position == ScreenRegion.TOP_LEFT && position == ScreenRegion.TOP_RIGHT) {
+            initialY += 10;
+        }
+        return initialY;
     }
 
     hidden function isButtonHighlighted(button) {
@@ -194,8 +261,11 @@ class MatchViewFocus extends Ui.View {
 }
 
 class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
+    hidden var view;
     function initialize(_view) {
         BehaviorDelegate.initialize();
+        view = _view;
+        $.bus.register(self);
     }
 
     function onPreviousPage() {
@@ -204,13 +274,71 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
                   Ui.SLIDE_IMMEDIATE);
     }
 
+    function onMenu() {
+        Sys.println("onMenu happened");
+        return true;
+    }
+
     function onKey(keyEvent) {
+        Sys.println("key pressed: " + keyEvent.getKey());
         if (keyEvent.getKey() == KEY_ENTER) {
-            if ($.match.isStarted()) {
-                manageScore($.match.getCurrentServerInfo()[:server]);
-            }
+            showPauseMenu();
         } else {
-            Sys.println("Nothing to do here! Moving on!");
+            Sys.println("Nothing to do here! Moving on! ");
+        }
+    }
+
+    function showPauseMenu() {
+        Sys.println("showPauseMenu happened");
+        var menu = new Ui.Menu2({:title => Rez.Strings.pause_menu_title});
+        var delegate;
+        menu.addItem(
+            new Ui.MenuItem(
+                Rez.Strings.pause_menu_continue,
+                null,
+                :menu_item_continue,
+                {}
+            )
+        );
+        menu.addItem(
+            new Ui.MenuItem(
+                Rez.Strings.pause_menu_finish,
+                null,
+                :menu_item_finish,
+                {}
+            )
+        );
+        menu.addItem(
+            new Ui.MenuItem(
+                Rez.Strings.pause_menu_discard,
+                null,
+                :menu_item_discard,
+                {}
+            )
+        );
+        Ui.pushView(menu, new PauseMenuDelegate(), Ui.SLIDE_IMMEDIATE);
+        return true;
+    }
+
+    function onTap(event) {
+        Sys.println("Tap was detected");
+        Sys.println(ScreenRegion.getRegion(event.getCoordinates(), 6));
+       //whichButtonWasPressed(event.getCoordinates());
+    }
+
+    function whichButtonWasPressed(coords) {
+        var x = coords[0];
+        var y = coords[1];
+        var p1_btn = $.boundaries.get(:player_1_btn);
+        var p2_btn = $.boundaries.get(:player_2_btn);
+        if (x >= p1_btn[:x1] && x <= p1_btn[:x2] && y >= p1_btn[:y1] && y <= p1_btn[:y2]) {
+            Sys.println("it was player one");
+            manageScore(:player_1);
+        } else if (x >= p2_btn[:x1] && x <= p2_btn[:x2] && y >= p2_btn[:y1] && y <= p2_btn[:y2]) {
+            Sys.println("it was player two");
+            manageScore(:player_2);
+        } else {
+            Sys.println("It was noting");
         }
     }
 
@@ -308,7 +436,6 @@ class ServerSelectorDelegate extends Ui.Menu2InputDelegate {
 
     function onSelect(item) {
         var id = item.getId();
-        System.println(id);
         if (id == :player_1) {
             Toybox.System.println("Player one should be chosen here");
             selectServerAndStartMatch.invoke(:player_1);
@@ -320,5 +447,68 @@ class ServerSelectorDelegate extends Ui.Menu2InputDelegate {
         } else {
             selectServerAndStartMatch.invoke(:player_2);
         }
+    }
+}
+
+class PauseMenuDelegate extends Ui.Menu2InputDelegate {
+    function initialize() {
+        Menu2InputDelegate.initialize();
+    }
+
+    function onSelect(item) {
+        var id = item.getId();
+        if (id == :menu_item_continue) {
+            onBack();
+        } else if (id == :menu_item_finish) {
+            var finish_match_confirmation = new Ui.Confirmation(Ui.loadResource(Rez.Strings.pause_menu_confirmation_finish));
+            Ui.pushView(finish_match_confirmation, new FinishGameConfirmationDialog(method(:onConfirm)), Ui.SLIDE_IMMEDIATE);
+        } else if (id == :menu_item_discard) {
+            var discard_match_confirmation = new Ui.Confirmation(Ui.loadResource(Rez.Strings.pause_menu_confirmation_discard));
+            Ui.pushView(discard_match_confirmation, new DiscardMatchConfirmationDialog(), Ui.SLIDE_IMMEDIATE);
+        }
+        return true;
+    }
+
+    function onConfirm() {
+        onBack();
+    }
+}
+
+class DiscardMatchConfirmationDialog extends Ui.ConfirmationDelegate {
+    function initialize() {
+        ConfirmationDelegate.initialize();
+    }
+
+    function onResponse(value) {
+        if (value == CONFIRM_YES) {
+            $.match.discard();
+            System.exit();
+        } else {
+
+        }
+        return true;
+    }
+}
+
+class FinishGameConfirmationDialog extends Ui.ConfirmationDelegate {
+    hidden var onFinishGame;
+    function initialize(onFinishGame) {
+        ConfirmationDelegate.initialize();
+        self.onFinishGame = onFinishGame;
+    }
+
+    function onResponse(value) {
+        if (value == CONFIRM_YES) {
+            if ($.match.isStarted()) {
+                $.match.forceGameFinish();
+                onFinishGame.invoke();
+            } else {
+                $.match.save();
+                System.exit();
+            }
+        } else {
+
+        }
+        return true;
     }
 }

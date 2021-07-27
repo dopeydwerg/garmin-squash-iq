@@ -5,6 +5,7 @@ using Toybox.Activity as Activity;
 using Toybox.FitContributor as Contributor;
 using Toybox.WatchUi as Ui;
 using Toybox.Math as Math;
+using Toybox.ActivityMonitor as Monitor;
 
 class MatchGame {
 
@@ -15,14 +16,18 @@ class MatchGame {
     hidden var scores; //dictionnary containing players current scores
     hidden var winner; //store the winner of the match, :player_1 or :player_2
 
-  hidden var startTime;
-  hidden var finishTime;
+    hidden var startTime;
+    hidden var finishTime;
+
+    hidden var startSteps = 0;
+    hidden var steps = 0;
 
     function initialize(player) {
         beginner = player;
         rallies = new List();
         scores = {:player_1 => 0, :player_2 => 0};
-    startTime = Time.now();
+        startTime = Time.now();
+        startSteps = Monitor.getInfo().steps;
     }
 
   function score(player) {
@@ -44,6 +49,7 @@ class MatchGame {
   function end(player) {
     winner = player;
     finishTime = Time.now();
+    steps = startSteps - Monitor.getInfo().steps;
   }
 
   function getCurrentServerInfo() {
@@ -77,16 +83,15 @@ class MatchGame {
 
   function getElapsedTime() {
     var endTime = Time.now();
-    Sys.println(endTime);
     if (finishTime) {
       endTime = finishTime;
     }
     var elapsedTime = endTime.subtract(startTime).value();
-    Sys.println("elapsed seconds : " + elapsedTime);
+    //Sys.println("elapsed seconds : " + elapsedTime);
     var minutes = Math.floor(elapsedTime / 60);
-    Sys.println("minutes are : " + minutes);
+    //Sys.println("minutes are : " + minutes);
     var secondsLeft = elapsedTime - (minutes * 60);
-    Sys.println("secondsLeft = " + secondsLeft);
+    //Sys.println("secondsLeft = " + secondsLeft);
     return Lang.format("$1$.$2$", [minutes.format("%2d"), secondsLeft.format("%02d")]);
   }
 
@@ -103,7 +108,8 @@ class MatchGame {
       SquashItConstants.KEY_GAME_DURATION => getElapsedTime(),
       SquashItConstants.KEY_GAME_BEGINNER => beginner == :player_1 ? SquashItConstants.YOU : SquashItConstants.OPP,
       SquashItConstants.KEY_GAME_WINNER => winner == :player_1 ? SquashItConstants.YOU : SquashItConstants.OPP,
-      SquashItConstants.KEY_GAME_RALLIES => ralliesPlayed
+      SquashItConstants.KEY_GAME_RALLIES => ralliesPlayed,
+      SquashItConstants.KEY_GAME_STEPS => steps
     };
   }
 
@@ -122,6 +128,13 @@ class MatchGame {
   function hasEnded() {
     return false;
   }
+
+    function getStepsTaken() {
+        if (steps > 0) {
+            return steps;
+        }
+        return startSteps - Monitor.getInfo().steps;
+    }
 
   function getRallies() {
     return rallies;

@@ -18,6 +18,7 @@ class SquashItApp extends App.AppBase {
   }
 
     function vibrate(duration) {
+    Sys.println("Vibrating");
         var vibrateData = [ new Attention.VibeProfile(  80, duration ) ];
         Attention.vibrate( vibrateData );
     }

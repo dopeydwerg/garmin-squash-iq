@@ -50,6 +50,8 @@ class InitialView extends Ui.View {
   hidden var typeLabel = "";
 
   function onUpdate(dc) {
+    //! Put in the correct screen dimensions
+    ScreenRegion.setScreenDimensions(dc.getWidth(), dc.getHeight());
     var width = dc.getWidth();
     var height = dc.getHeight();
     var textCenter = Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER;
@@ -104,8 +106,8 @@ class InitialView extends Ui.View {
     var payload = message.get(SquashItConstants.KEY_MESSAGE_PAYLOAD);
 
     if (type == SquashItConstants.MESSAGE_TYPE_PLAYER_INFO) {
-        App.getApp().setProperty("opponent_name", message);
-        App.getApp().setProperty("opponent_id", message);
+        App.getApp().setProperty("opponent_name", payload.get(SquashItConstants.KEY_MATCH_OPPONENT_NAME));
+        App.getApp().setProperty("opponent_id", payload.get(SquashItConstants.KEY_MATCH_OPPONENT_ID));
     }
 
     Ui.requestUpdate();
