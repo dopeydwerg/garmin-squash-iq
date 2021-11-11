@@ -15,6 +15,7 @@ class SquashItApp extends App.AppBase {
     // create bus for the whole application
     $.bus = new Bus();
     $.bus.register(self);
+    AppState.init();
   }
 
     function vibrate(duration) {
@@ -37,5 +38,11 @@ class SquashItApp extends App.AppBase {
     function getInitialView() {
         var view = new InitialView();
         return [ view, new InitialViewDelegate(view) ];
+    }
+
+    function onSettingsChanged() {
+        Sys.println("settings changed");
+        AppState.fetchSettings();
+        Ui.requestUpdate();
     }
 }

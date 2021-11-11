@@ -49,7 +49,7 @@ class MatchGame {
   function end(player) {
     winner = player;
     finishTime = Time.now();
-    steps = startSteps - Monitor.getInfo().steps;
+    steps = Monitor.getInfo().steps - startSteps;
   }
 
   function getCurrentServerInfo() {
@@ -133,7 +133,7 @@ class MatchGame {
         if (steps > 0) {
             return steps;
         }
-        return startSteps - Monitor.getInfo().steps;
+        return Monitor.getInfo().steps - startSteps;
     }
 
   function getRallies() {

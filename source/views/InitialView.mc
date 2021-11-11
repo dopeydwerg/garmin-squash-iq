@@ -136,25 +136,20 @@ class InitialViewDelegate extends Ui.BehaviorDelegate {
     Sys.println(event.getCoordinates());
   }
 
-  function onKey(keyEvent) {
-    if (keyEvent.getKey() == KEY_ENTER) {
-      Sys.println("Starting the game!!");
-      $.bus.dispatch(new BusEvent( :vibrate, 200));
-      var num_games = App.getApp().getProperty("games_to_play");
-      $.match = new Match(num_games, App.getApp().getProperty("opponent_name"), 0);
-      if (lastUsedScreen == "MatchView") {
-            var matchView = new MatchView();
-            Ui.switchToView(matchView, new MatchViewDelegate(),
-                              Ui.SLIDE_IMMEDIATE);
+    function onKey(keyEvent) {
+        if (keyEvent.getKey() == KEY_ENTER) {
+           Sys.println("Starting the game!!");
+           $.bus.dispatch(new BusEvent( :vibrate, 200));
+           var num_games = App.getApp().getProperty("games_to_play");
+
+           $.match = new Match(num_games, App.getApp().getProperty("opponent_name"), 0);
+           var matchViewFocus = new MatchViewFocus();
+               Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
+                   Ui.SLIDE_IMMEDIATE);
         } else {
-            var matchViewFocus = new MatchViewFocus();
-            Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
-                              Ui.SLIDE_IMMEDIATE);
+           Sys.println("Nothing to do here! Moving on!");
         }
-    } else {
-      Sys.println("Nothing to do here! Moving on!");
     }
-  }
 
   function onEnter() { Sys.println("testing on onEnter"); }
 

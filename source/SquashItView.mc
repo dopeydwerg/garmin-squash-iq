@@ -1,6 +1,6 @@
 using Toybox.WatchUi;
 
-class SquashItView extends WatchUi.View {
+class SquashItViews extends WatchUi.View {
 
     function initialize() {
         View.initialize();
@@ -19,8 +19,8 @@ class SquashItView extends WatchUi.View {
 
     // Update the view
     function onUpdate(dc) {
-    	var myRaster = new Rez.Drawables.screenDivider();
-		  myRaster.draw( dc );
+        var myRaster = new Rez.Drawables.screenDivider();
+          myRaster.draw( dc );
       // Call the parent onUpdate function to redraw the layout
       View.onUpdate(dc);
     }

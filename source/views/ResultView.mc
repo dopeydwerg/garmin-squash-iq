@@ -20,7 +20,6 @@ class SaveMatchConfirmationDelegate extends Ui.ConfirmationDelegate {
         SquashItConstants.KEY_MESSAGE_TYPE => SquashItConstants.MESSAGE_TYPE_SAVE_MATCH,
         SquashItConstants.KEY_MESSAGE_PAYLOAD => $.match.getMatchStats()
       };
-      Sys.println(message);
       Comm.transmit(message, null, new TransmitCommListener(method(:onTransmitComplete)));
     } else {
       $.match.discard();

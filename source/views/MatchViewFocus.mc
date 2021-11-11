@@ -32,8 +32,6 @@ class MatchViewFocus extends Ui.View {
         View.initialize();
         Sys.println("Initialized MatchViewFocus" );
 
-        Storage.setValue("lastUsedScreen", "MatchViewFocus");
-
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         Sensor.enableSensorEvents(method(:onSensor));
     }
@@ -62,9 +60,9 @@ class MatchViewFocus extends Ui.View {
     function setupStartMatchButton(dc) {
         var options = {
             :locx => 0,
-            :locY => initialY + AppConstants.VERTICAL_SPACING + segmentHeight,
+            :locY => dc.getHeight() / 3,
             :width => dc.getWidth(),
-            :height => segmentHeight,
+            :height => dc.getHeight() / 3,
             :behavior => :onStartMatch,
             :stateHighlighted => Gfx.COLOR_RED,
             :stateDefault => Gfx.COLOR_WHITE
@@ -79,9 +77,9 @@ class MatchViewFocus extends Ui.View {
 
         var options = {
             :locx => 0,
-            :locY => initialY + AppConstants.VERTICAL_SPACING + segmentHeight,
+            :locY => dc.getHeight() / 3,
             :width => widthButton,
-            :height => segmentHeight,
+            :height => dc.getHeight() / 3,
             :behavior => :onPlayer1,
             :stateHighlighted => Gfx.COLOR_RED,
             :stateDefault => Gfx.COLOR_WHITE
@@ -120,11 +118,12 @@ class MatchViewFocus extends Ui.View {
         if ($.match.isStarted()) {
             var serveInfo = $.match.getCurrentServerInfo();
             var game = $.match.getCurrentGame();
-            elapsedTime = game.getElapsedTime();
+            elapsedTime = AppState.showGameInfo ? game.getElapsedTime() : Helpers.formatDuration($.match.getDuration());
             drawPlayerButton(dc, x, y, "YOU", game.getScore(:player_1), $.match.getGamesWon(:player_1), Gfx.TEXT_JUSTIFY_RIGHT, serveInfo[:server] == :player_1 ? serveInfo[:serve] : null);
             x = dc.getWidth() / 2 + AppConstants.HORIZONTAL_SPACING;
             drawPlayerButton(dc, x, y, "OPP", game.getScore(:player_2), $.match.getGamesWon(:player_2), Gfx.TEXT_JUSTIFY_LEFT, serveInfo[:server] == :player_2 ? serveInfo[:serve] : null);
         } else {
+            elapsedTime = Helpers.formatDuration($.match.getDuration());
             dc.setColor(Gfx.COLOR_BLACK, Gfx.COLOR_TRANSPARENT);
             dc.drawText(dc.getWidth() / 2, y, Gfx.FONT_SMALL, "Warming Up!!", Gfx.TEXT_JUSTIFY_CENTER);
             dc.drawText(x, initialY + AppConstants.VERTICAL_SPACING + (segmentHeight * 2) - dc.getFontHeight(Gfx.FONT_SMALL), Gfx.FONT_SMALL, "Press to Start!", Gfx.TEXT_JUSTIFY_CENTER);
@@ -138,6 +137,13 @@ class MatchViewFocus extends Ui.View {
         dc.drawLine(dc.getWidth() / 2, dc.getHeight() / 3 * 2 - 6, dc.getWidth() / 2, dc.getHeight());
         drawBottomRight(dc);
         y = y + (AppConstants.VERTICAL_SPACING / 2);
+
+        drawClock(dc);
+        // Bottom label for Game or Match info
+        if (AppState.switchBottomInfo) {
+            dc.setColor(AppState.accentColor, Gfx.COLOR_BLACK);
+            dc.drawText(dc.getWidth() / 2, dc.getHeight() - Gfx.getFontHeight(Gfx.FONT_XTINY) - 3, Gfx.FONT_XTINY, AppState.showGameInfo ? "GAME" : "MATCH", Gfx.TEXT_JUSTIFY_CENTER);
+        }
     }
 
     function setPlayerButtonColors() {
@@ -183,13 +189,23 @@ class MatchViewFocus extends Ui.View {
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
     }
 
+    function drawClock(dc) {
+        if (!AppState.showClock) {
+             return;
+        }
+        var clockTime = Sys.getClockTime();
+        var timeString = Lang.format("$1$:$2$", [clockTime.hour, clockTime.min.format("%02d")]);
+        dc.setColor(AppState.accentColor, Gfx.COLOR_BLACK);
+        dc.drawText(dc.getWidth() / 2, 0, Gfx.FONT_XTINY, timeString, Gfx.TEXT_JUSTIFY_CENTER);
+    }
+
     function drawHeartRate(dc, position) {
         var justify = getJustifycation(position);
         var x = dc.getWidth() / 2 + (justify == Gfx.TEXT_JUSTIFY_RIGHT ? - AppConstants.HORIZONTAL_SPACING : AppConstants.HORIZONTAL_SPACING);
-        var startY = getStartY(position);
+        var startY = getStartY(position, dc);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, startY, STATS_LABEL_FONT, "HRM", justify);
-        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING;
+        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING + (AppState.showClock ? 5 : 0);
         dc.drawText(x, startY, STATS_VALUE_FONT, currentHR, justify);
     }
 
@@ -197,29 +213,31 @@ class MatchViewFocus extends Ui.View {
         var data = $.dataTracker.getCurrentData();
         var justify = getJustifycation(position);
         var x = dc.getWidth() / 2 + (justify == Gfx.TEXT_JUSTIFY_RIGHT ? - AppConstants.HORIZONTAL_SPACING : AppConstants.HORIZONTAL_SPACING);
-        var startY = getStartY(position);
+        var startY = getStartY(position, dc);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, startY, STATS_LABEL_FONT, "CAL", justify);
-        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING;
+        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING + (AppState.showClock ? 5 : 0);
         dc.drawText(x, startY, STATS_VALUE_FONT, data[:caloriesBurned], justify);
     }
 
     function drawBottomLeft(dc) {
-        var y = dc.getHeight() - getStartY(ScreenRegion.BOTTOM_LEFT) - Gfx.getFontHeight(STATS_LABEL_FONT);
+        var y = dc.getHeight() - getEndY(ScreenRegion.BOTTOM_LEFT, dc) - Gfx.getFontHeight(STATS_LABEL_FONT);
         var justify = getJustifycation(ScreenRegion.BOTTOM_LEFT);
         var x = dc.getWidth() / 2 - AppConstants.HORIZONTAL_SPACING;
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, y, STATS_LABEL_FONT, "TIME", justify);
-        y = y - dc.getFontHeight(STATS_VALUE_FONT) - AppConstants.VERTICAL_SPACING - AppConstants.EXTRA_VERTICAL_SPACING;
+        y = y - dc.getFontHeight(STATS_VALUE_FONT) - AppConstants.VERTICAL_SPACING + (AppState.switchBottomInfo ? 15 : 5);
         dc.drawText(x, y, STATS_VALUE_FONT, elapsedTime, justify);
     }
 
     function drawBottomRight(dc) {
-        var y = dc.getHeight() - getStartY(ScreenRegion.BOTTOM_RIGHT) - Gfx.getFontHeight(STATS_LABEL_FONT);
+        var y = dc.getHeight() - getEndY(ScreenRegion.BOTTOM_RIGHT, dc) - Gfx.getFontHeight(STATS_LABEL_FONT);
         var justify = getJustifycation(ScreenRegion.BOTTOM_RIGHT);
         var x = dc.getWidth() / 2 + AppConstants.HORIZONTAL_SPACING;
+        dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, y, STATS_LABEL_FONT, "STEPS", justify);
-        y = y - dc.getFontHeight(STATS_VALUE_FONT) - AppConstants.VERTICAL_SPACING - AppConstants.EXTRA_VERTICAL_SPACING;
-        dc.drawText(x, y, STATS_VALUE_FONT, $.dataTracker.getCurrentData()[:stepsTaken], justify);
+        y = y - dc.getFontHeight(STATS_VALUE_FONT) - AppConstants.VERTICAL_SPACING  + (AppState.switchBottomInfo ? 15 : 5);
+        dc.drawText(x, y, STATS_VALUE_FONT, AppState.showGameInfo ? $.match.getCurrentGame().getStepsTaken() : $.dataTracker.getCurrentData()[:stepsTaken], justify);
     }
 
     function getJustifycation(position) {
@@ -233,12 +251,20 @@ class MatchViewFocus extends Ui.View {
         return Gfx.TEXT_JUSTIFY_CENTER;
     }
 
-    function getStartY(position) {
-        var initialY = AppConstants.EXTRA_VERTICAL_SPACING;
-        if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND && position == ScreenRegion.TOP_LEFT && position == ScreenRegion.TOP_RIGHT) {
-            initialY += 10;
+    function getStartY(position, dc) {
+        var initialY = (AppState.showClock ? dc.getFontHeight(Gfx.FONT_XTINY) : AppConstants.EXTRA_VERTICAL_SPACING);
+        if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND && (position == ScreenRegion.TOP_LEFT || position == ScreenRegion.TOP_RIGHT)) {
+            initialY += (!AppState.showClock ? 10 : -5);
         }
         return initialY;
+    }
+
+    function getEndY(position, dc) {
+        var endY = (AppState.switchBottomInfo ? dc.getFontHeight(Gfx.FONT_XTINY) : AppConstants.EXTRA_VERTICAL_SPACING);
+        if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND && (position == ScreenRegion.BOTTOM_LEFT || position == ScreenRegion.BOTTOM_RIGHT)) {
+            endY += (!AppState.switchBottomInfo ? 10 : - 0);
+        }
+        return endY;
     }
 
     hidden function isButtonHighlighted(button) {
@@ -269,9 +295,6 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
     }
 
     function onPreviousPage() {
-        var matchView = new MatchView();
-        Ui.switchToView(matchView, new MatchViewDelegate(),
-                  Ui.SLIDE_IMMEDIATE);
     }
 
     function onMenu() {
@@ -321,25 +344,13 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
     }
 
     function onTap(event) {
-        Sys.println("Tap was detected");
-        Sys.println(ScreenRegion.getRegion(event.getCoordinates(), 6));
-       //whichButtonWasPressed(event.getCoordinates());
-    }
-
-    function whichButtonWasPressed(coords) {
-        var x = coords[0];
-        var y = coords[1];
-        var p1_btn = $.boundaries.get(:player_1_btn);
-        var p2_btn = $.boundaries.get(:player_2_btn);
-        if (x >= p1_btn[:x1] && x <= p1_btn[:x2] && y >= p1_btn[:y1] && y <= p1_btn[:y2]) {
-            Sys.println("it was player one");
-            manageScore(:player_1);
-        } else if (x >= p2_btn[:x1] && x <= p2_btn[:x2] && y >= p2_btn[:y1] && y <= p2_btn[:y2]) {
-            Sys.println("it was player two");
-            manageScore(:player_2);
-        } else {
-            Sys.println("It was noting");
+        var tapRegion = ScreenRegion.getRegion(event.getCoordinates(), 6);
+        if (tapRegion[:y] == ScreenRegion.BOTTOM) {
+            if (!$.match.isStarted()) { return; }
+            AppState.showGameInfo = AppState.showGameInfo ? false : true;
+            Ui.requestUpdate();
         }
+       //whichButtonWasPressed(event.getCoordinates());
     }
 
     function manageScore(player) {
@@ -406,6 +417,7 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
     function selectServerAndStartMatch(server) {
         if (!$.match.isStarted()) {
             $.match.start(server);
+            AppState.showGameInfo = true;
             var matchViewFocus = new MatchViewFocus();
               Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
                               Ui.SLIDE_IMMEDIATE);
@@ -421,6 +433,7 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
         } else {
             $.match.discard();
             var view = new InitialView();
+            AppState.showGameInfo = false;
             Ui.switchToView(view, new InitialViewDelegate(view), Ui.SLIDE_IMMEDIATE);
         }
         return true;

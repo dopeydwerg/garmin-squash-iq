@@ -31,6 +31,9 @@ class GameResultView extends Ui.View {
         var steps_taken_text = Ui.loadResource(Rez.Strings.game_end_steps);
         findDrawableById("game_result_steps").setText(Helpers.formatString(steps_taken_text, {"steps_taken" => game.getStepsTaken().toString()}));
 
+        var score_match_text = $.match.getGamesWon(:player_1).toString() + " - " + $.match.getGamesWon(:player_2).toString();
+        findDrawableById("game_result_match").setText(score_match_text);
+
         findDrawableById("game_result_what_next").setText(Ui.loadResource(Rez.Strings.game_end_what_next));
 
         findDrawableById("game_result_next_server_you").setText(Ui.loadResource(Rez.Strings.game_end_you_label));
@@ -60,15 +63,9 @@ class GameResultViewDelegate extends Ui.BehaviorDelegate {
     }
 
     function returnToCorrectView() {
-        if (Storage.getValue("lastUsedScreen") == "MatchView") {
-            var matchView = new MatchView();
-            Ui.switchToView(matchView, new MatchViewDelegate(),
-                              Ui.SLIDE_IMMEDIATE);
-        } else {
-            var matchViewFocus = new MatchViewFocus();
-            Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
-                              Ui.SLIDE_IMMEDIATE);
-        }
+        var matchViewFocus = new MatchViewFocus();
+        Ui.switchToView(matchViewFocus, new MatchViewFocusDelegate(matchViewFocus),
+                          Ui.SLIDE_IMMEDIATE);
     }
 
     function onSelect() {

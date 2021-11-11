@@ -9,16 +9,15 @@ class SquashItDelegate extends WatchUi.BehaviorDelegate {
     return true;
   }
 
-  function onNextPage() { System.println("onNextPage happened"); }
+  function onNextPage() { }
 
-  function onPreviousPage() { System.println("onPreviousPage happened"); }
+  function onPreviousPage() { }
 
   function onBack() {
-    System.println("onBack happened");
     return false;
   }
 
   function onStart(state) {
-    System.println(state);
+
   }
 }

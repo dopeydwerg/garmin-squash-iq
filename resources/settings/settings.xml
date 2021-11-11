@@ -12,5 +12,28 @@
         <listEntry value="1">@Strings.Competition</listEntry>
       </settingConfig>
     </setting>
+    <setting propertyKey="@Properties.accent_color" title="@Strings.settings_accent_color">
+      <settingConfig type="list" required="true">
+        <listEntry value="0xFFFFFF">@Strings.settings_color_white</listEntry>
+        <listEntry value="0xAAAAAA">@Strings.settings_color_light_gray</listEntry>
+        <listEntry value="0x555555">@Strings.settings_color_dark_gray</listEntry>
+        <listEntry value="0xFF0000">@Strings.settings_color_red</listEntry>
+        <listEntry value="0xAA0000">@Strings.settings_color_dark_red</listEntry>
+        <listEntry value="0xFF5500">@Strings.settings_color_orange</listEntry>
+        <listEntry value="0xFFAA00">@Strings.settings_color_yellow</listEntry>
+        <listEntry value="0x00FF00">@Strings.settings_color_green</listEntry>
+        <listEntry value="0x00AA00">@Strings.settings_color_dark_green</listEntry>
+        <listEntry value="0x00AAFF">@Strings.settings_color_blue</listEntry>
+        <listEntry value="0x0000FF">@Strings.settings_color_dark_blue</listEntry>
+        <listEntry value="0xAA00FF">@Strings.settings_color_purple</listEntry>
+        <listEntry value="0xFF00FF">@Strings.settings_color_pink</listEntry>
+      </settingConfig>
+    </setting>
+    <setting propertyKey="@Properties.show_clock" title="@Strings.settings_show_clock_title">
+      <settingConfig type="boolean" required="true" />
+    </setting>
+    <setting propertyKey="@Properties.switchable_bottom_info" title="@Strings.settings_switchable_bottom_info_title">
+      <settingConfig type="boolean" required="true" />
+    </setting>
   </settings>
 </resources>
