@@ -1,9 +1,0 @@
-<layout id="MainLayout">
-  <drawable id="screenDivider" />
-  <text-area id="BlockOfText" text="Lorem ipsum dolor sit amet, consectetur adipiscing elit." x="33%" y="66%" width="33%" height="33%" color="Gfx.COLOR_DK_BLUE" justification="Gfx.TEXT_JUSTIFY_CENTER | Gfx.TEXT_JUSTIFY_VCENTER">
-    <fonts>
-      <font>Gfx.FONT_TINY</font>
-      <font>Gfx.FONT_XTINY</font>
-    </fonts>
-  </text-area>
-</layout>

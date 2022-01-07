@@ -3,13 +3,17 @@
     <setting propertyKey="@Properties.opponent_name" title="@Strings.settings_opponent_name_title">
       <settingConfig type="alphaNumeric" required="true" />
     </setting>
-    <setting propertyKey="@Properties.games_to_play" title="@Strings.settings_maximum_number_of_games">
+    <setting propertyKey="@Properties.points_to_play" title="@Strings.settings_maximum_number_of_points">
       <settingConfig type="numeric" required="true" />
     </setting>
+    <!-- 
+    <setting propertyKey="@Properties.games_to_play" title="@Strings.settings_maximum_number_of_games">
+      <settingConfig type="numeric" required="true" />
+    </setting> -->
     <setting propertyKey="@Properties.match_type" title="@Strings.settings_match_type">
       <settingConfig type="list" required="true">
-        <listEntry value="0">@Strings.Friendly</listEntry>
-        <listEntry value="1">@Strings.Competition</listEntry>
+        <listEntry value="0">@Strings.Singles</listEntry>
+        <listEntry value="1">@Strings.Doubles</listEntry>
       </settingConfig>
     </setting>
     <setting propertyKey="@Properties.accent_color" title="@Strings.settings_accent_color">

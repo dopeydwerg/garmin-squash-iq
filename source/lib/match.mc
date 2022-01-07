@@ -34,7 +34,7 @@ class Match {
 
   function initialize(games_to_play, name, id)  {
     // prepare the Games
-    games = new List();
+    games = new List(AppState.gamesToPlay);
     // for (var i = 0; i < games_to_play; i++) {
     //   games.get(i) = -1;
     // }
@@ -154,10 +154,10 @@ class Match {
   function isGameWon(game) {
     var scorePlayer1 = game.getScore(:player_1);
     var scorePlayer2 = game.getScore(:player_2);
-    if  (scorePlayer1 >= 11 && (scorePlayer1 - scorePlayer2) > 1) {
+    if  (scorePlayer1 >= AppState.pointsToPlay && ((scorePlayer1 - scorePlayer2) > 1 || AppState.matchType == 1)) {
       return :player_1;
     }
-    if  (scorePlayer2 >= 11 && (scorePlayer2 - scorePlayer1) > 1) {
+    if  (scorePlayer2 >= AppState.pointsToPlay && ((scorePlayer2 - scorePlayer1) > 1 || AppState.matchType == 1)) {
       return :player_2;
     }
     return null;

@@ -24,21 +24,21 @@ class MatchGame {
 
     function initialize(player) {
         beginner = player;
-        rallies = new List();
+        rallies = new List(11);
         scores = {:player_1 => 0, :player_2 => 0};
         startTime = Time.now();
         startSteps = Monitor.getInfo().steps;
     }
 
-  function score(player) {
-    if (!hasEnded()) {
-      rallies.push(player);
-      scores[player]++;
-      Sys.println(scores);
+    function score(player) {
+        if (!hasEnded()) {
+            rallies.push(player);
+            scores[player]++;
+            Sys.println(scores);
+        }
     }
-  }
 
-  function undo() {
+    function undo() {
         if(rallies.size() > 0) {
             winner = null;
             var rally = rallies.pop();

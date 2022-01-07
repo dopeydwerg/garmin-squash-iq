@@ -8,6 +8,7 @@
   <string id="settings_opponent_name_title">Oppenent Name</string>
   <string id="settings_match_type">Match Type</string>
   <string id="settings_maximum_number_of_games">Games to play</string>
+  <string id="settings_maximum_number_of_points">Points to play</string>
   <string id="settings_show_clock_title">Show clock in matchview</string>
   <string id="settings_switchable_bottom_info_title">Show clock in matchview</string>
   <string id="settings_accent_color">Accent color (small label on the top and the bottom)</string>
@@ -25,8 +26,8 @@
   <string id="settings_color_yellow">Yellow</string>
   <string id="settings_color_blue">Blue</string>
 
-  <string id="Friendly">Friendly</string>
-  <string id="Competition">Competition</string>
+  <string id="Singles">Singles</string>
+  <string id="Doubles">Doubles</string>
 
   <string id="game_end_you_label">You</string>
   <string id="game_end_opponent_label">Opp</string>

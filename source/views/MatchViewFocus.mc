@@ -1,4 +1,6 @@
 using Toybox.Application as App;
+using Toybox.ActivityMonitor as Act;
+using Toybox.Activity as Acty;
 using Toybox.WatchUi as Ui;
 using Toybox.Graphics as Gfx;
 using Toybox.System as Sys;
@@ -274,14 +276,31 @@ class MatchViewFocus extends Ui.View {
     //! Function called to read heart rate sensor value
     function onSensor(sensor_info)
     {
-        if( sensor_info.heartRate != null )
-        {
+        if (Act has :getHeartRateHistory) {
+            currentHR = Acty.getActivityInfo().currentHeartRate;
+            if(currentHR==null) {
+                var HRH=Act.getHeartRateHistory(1, true);
+                var HRS=HRH.next();
+                if(HRS!=null && HRS.heartRate!= Act.INVALID_HR_SAMPLE){
+                    currentHR = HRS.heartRate;
+                }
+            }
+            if(currentHR!=null) {
+                currentHR = currentHR.toString();
+            } else{
+                currentHR = "--";
+            }
+        }
+        else if(sensor_info.heartRate != null) {
             currentHR = sensor_info.heartRate.toString();
         }
         else
         {
             currentHR = "---";
         }
+
+        //currentHR = currentHR + "/" + heartRate;
+
         Ui.requestUpdate();
     }
 }

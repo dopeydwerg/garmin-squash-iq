@@ -3,7 +3,8 @@
     <property id="opponent_name" type="string">Opp</property>
     <property id="opponent_id" type="number">0</property>
     <property id="match_type" type="number">0</property>
-    <property id="games_to_play" type="number">10</property>
+    <property id="games_to_play" type="number">5</property>
+    <property id="points_to_play" type="number">11</property>
     <property id="show_clock" type="boolean">true</property>
     <property id="switchable_bottom_info" type="boolean">true</property>
     <property id="accent_color" type="number">0xFF5500</property>
