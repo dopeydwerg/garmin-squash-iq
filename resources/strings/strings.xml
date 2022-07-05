@@ -10,7 +10,8 @@
   <string id="settings_maximum_number_of_games">Games to play</string>
   <string id="settings_maximum_number_of_points">Points to play</string>
   <string id="settings_show_clock_title">Show clock in matchview</string>
-  <string id="settings_switchable_bottom_info_title">Show clock in matchview</string>
+  <string id="settings_switchable_bottom_info_title">Ability to switch bottom info</string>
+  <string id="settings_use_vibration_title">Vibration</string>
   <string id="settings_accent_color">Accent color (small label on the top and the bottom)</string>
   <string id="settings_color_white">White</string>
   <string id="settings_color_green">Green</string>
@@ -85,4 +86,7 @@
 	<string id="text_transfer_failure">Transfer Failed</string>
 	
 	<string id="confirm_exit">Are you sure you want to quit</string>
+	
+	<string id="yes">yes</string>
+	<string id="screenCorrection">no</string>
 </strings>

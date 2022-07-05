@@ -25,6 +25,7 @@ class MatchViewFocus extends Ui.View {
     hidden const textCenter = Gfx.TEXT_JUSTIFY_CENTER;
     hidden const STATS_LABEL_FONT = Gfx.FONT_TINY;
     hidden const STATS_VALUE_FONT = Gfx.FONT_NUMBER_MILD;
+    hidden var EXTRA_VERTICAL_SPACING = 0;
 
     //! Array of 2 buttons containing the player 1 and player 2
     //! buttons
@@ -32,7 +33,13 @@ class MatchViewFocus extends Ui.View {
 
     function initialize() {
         View.initialize();
-        Sys.println("Initialized MatchViewFocus" );
+
+        var screenCorrection = ""+Ui.loadResource(Rez.Strings.screenCorrection);
+        var yes = ""+Ui.loadResource(Rez.Strings.yes);
+
+        if ("yes".equals(screenCorrection)) {
+            EXTRA_VERTICAL_SPACING = 10;
+        }
 
         Sensor.setEnabledSensors([Sensor.SENSOR_HEARTRATE]);
         Sensor.enableSensorEvents(method(:onSensor));
@@ -48,7 +55,8 @@ class MatchViewFocus extends Ui.View {
 
     function onLayout(dc) {
         Sys.println("Onlayout");
-        initialY = AppConstants.EXTRA_VERTICAL_SPACING;
+        Sys.println(Ui.loadResource(Rez.Strings.screenCorrection) + " " + $.device.screenHeight + " " + dc.getHeight());
+        initialY = EXTRA_VERTICAL_SPACING;
 
         segmentHeight = (dc.getHeight() - (initialY * 2) - (AppConstants.HORIZONTAL_SPACING * 2)) / 3;
 
@@ -174,7 +182,8 @@ class MatchViewFocus extends Ui.View {
         // Server info. Draw concurrent serves in a squashball
         if (serveInfo != null) {
             var serveX = x + (justify == Gfx.TEXT_JUSTIFY_RIGHT ? - dc.getWidth() / 4 : dc.getWidth() / 4) * 1.5;
-            dc.fillCircle(serveX , y + 20, 20);
+            var radius = dc.getFontHeight(Gfx.FONT_TINY) / 2 + 2;
+            dc.fillCircle(serveX , y + radius, radius);
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
             dc.drawText(serveX, y, Gfx.FONT_TINY, serveInfo, Gfx.TEXT_JUSTIFY_CENTER);
             dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
@@ -207,7 +216,7 @@ class MatchViewFocus extends Ui.View {
         var startY = getStartY(position, dc);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, startY, STATS_LABEL_FONT, "HRM", justify);
-        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING + (AppState.showClock ? 5 : 0);
+        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + EXTRA_VERTICAL_SPACING + (AppState.showClock ? 5 : 0);
         dc.drawText(x, startY, STATS_VALUE_FONT, currentHR, justify);
     }
 
@@ -218,7 +227,7 @@ class MatchViewFocus extends Ui.View {
         var startY = getStartY(position, dc);
         dc.setColor(Gfx.COLOR_WHITE, Gfx.COLOR_TRANSPARENT);
         dc.drawText(x, startY, STATS_LABEL_FONT, "CAL", justify);
-        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + AppConstants.EXTRA_VERTICAL_SPACING + (AppState.showClock ? 5 : 0);
+        startY = dc.getFontHeight(STATS_LABEL_FONT) + AppConstants.VERTICAL_SPACING + EXTRA_VERTICAL_SPACING + (AppState.showClock ? 5 : 0);
         dc.drawText(x, startY, STATS_VALUE_FONT, data[:caloriesBurned], justify);
     }
 
@@ -254,15 +263,15 @@ class MatchViewFocus extends Ui.View {
     }
 
     function getStartY(position, dc) {
-        var initialY = (AppState.showClock ? dc.getFontHeight(Gfx.FONT_XTINY) : AppConstants.EXTRA_VERTICAL_SPACING);
+        var initialY = (AppState.showClock ? dc.getFontHeight(Gfx.FONT_XTINY) : EXTRA_VERTICAL_SPACING);
         if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND && (position == ScreenRegion.TOP_LEFT || position == ScreenRegion.TOP_RIGHT)) {
-            initialY += (!AppState.showClock ? 10 : -5);
+            //initialY += (!AppState.showClock ? 10 : -5);
         }
         return initialY;
     }
 
     function getEndY(position, dc) {
-        var endY = (AppState.switchBottomInfo ? dc.getFontHeight(Gfx.FONT_XTINY) : AppConstants.EXTRA_VERTICAL_SPACING);
+        var endY = (AppState.switchBottomInfo ? dc.getFontHeight(Gfx.FONT_XTINY) : EXTRA_VERTICAL_SPACING);
         if (System.getDeviceSettings().screenShape == System.SCREEN_SHAPE_ROUND && (position == ScreenRegion.BOTTOM_LEFT || position == ScreenRegion.BOTTOM_RIGHT)) {
             endY += (!AppState.switchBottomInfo ? 10 : - 0);
         }
@@ -313,9 +322,6 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
         $.bus.register(self);
     }
 
-    function onPreviousPage() {
-    }
-
     function onMenu() {
         Sys.println("onMenu happened");
         return true;
@@ -323,11 +329,30 @@ class MatchViewFocusDelegate extends Ui.BehaviorDelegate {
 
     function onKey(keyEvent) {
         Sys.println("key pressed: " + keyEvent.getKey());
-        if (keyEvent.getKey() == KEY_ENTER) {
-            showPauseMenu();
-        } else {
-            Sys.println("Nothing to do here! Moving on! ");
+        Sys.println("key down = " + KEY_DOWN);
+
+        switch(keyEvent.getKey()) {
+            case KEY_ENTER:
+                if (!$.device.isTouchScreen && !$.match.isStarted()) {
+                    onStartMatch();
+                } else {
+                    showPauseMenu();
+                }
+                break;
+            case KEY_DOWN:
+                if ($.match.isStarted()) {
+                    manageScore($.match.getCurrentServerInfo()[:server]);
+                }
+                break;
+            case KEY_CLOCK:
+            case KEY_UP:
+                if ($.match.isStarted()) {
+                    manageScore($.match.getCurrentServerInfo()[:server] == :player_1 ? :player_2 : :player_1);
+                    return true;
+                }
+                break;
         }
+        return true;
     }
 
     function showPauseMenu() {

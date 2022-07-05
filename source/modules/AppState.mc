@@ -14,6 +14,8 @@ module AppState {
     var pointsToPlay = 11;
     var gamesToPlay = 5;
     var matchType = 0;
+    var useVibration = true;
+    var version = "1.0.0";
 
     function fetchSettings() {
         showClock = getProperty("show_clock");
@@ -22,6 +24,8 @@ module AppState {
         pointsToPlay = getProperty("points_to_play");
         gamesToPlay = getProperty("games_to_play");
         matchType = getProperty("match_type");
+        useVibration = getProperty("use_vibration");
+        version = getProperty("version");
     }
 
     function getProperty(key) {

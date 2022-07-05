@@ -19,9 +19,10 @@ class SquashItApp extends App.AppBase {
   }
 
     function vibrate(duration) {
-    Sys.println("Vibrating");
-        var vibrateData = [ new Attention.VibeProfile(  80, duration ) ];
-        Attention.vibrate( vibrateData );
+        if (AppState.useVibration) {
+            var vibrateData = [ new Attention.VibeProfile(  80, duration ) ];
+            Attention.vibrate( vibrateData );
+        }
     }
 
     // onStart() is called on application start up

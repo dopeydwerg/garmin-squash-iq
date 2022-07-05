@@ -69,7 +69,41 @@ class GameResultViewDelegate extends Ui.BehaviorDelegate {
     }
 
     function onSelect() {
-        Sys.println("in this on select thingy");
+        if (!$.device.isTouchScreen) {
+            showNextStepMenu();
+        }
+        return true;
+    }
+
+    function showNextStepMenu() {
+        Sys.println("onStartMatch happened");
+        var menu = new Ui.Menu2({:title => Rez.Strings.player_menu_title});
+        var delegate;
+        menu.addItem(
+            new Ui.MenuItem(
+                Rez.Strings.player_menu_item_you,
+                null,
+                :player_1,
+                {}
+            )
+        );
+        menu.addItem(
+            new Ui.MenuItem(
+                App.getApp().getProperty("opponent_name"),
+                null,
+                :player_2,
+                {}
+            )
+        );
+        menu.addItem(
+            new Ui.MenuItem(
+                Rez.Strings.game_end_finish_match,
+                null,
+                :finish,
+                {}
+            )
+        );
+        Ui.pushView(menu, new NextStepMenuDelegate(method(:handleNextGame), method(:onFinish)), Ui.SLIDE_IMMEDIATE);
         return true;
     }
 
@@ -91,5 +125,27 @@ class GameResultViewDelegate extends Ui.BehaviorDelegate {
         $.match.finish();
         Ui.switchToView(new ResultView(), new ResultViewDelegate(), Ui.SLIDE_IMMEDIATE);
         return true;
+    }
+}
+
+class NextStepMenuDelegate extends Ui.Menu2InputDelegate {
+    hidden var handleNextGame;
+    hidden var onFinish;
+    function initialize(nextGame, finish) {
+        Menu2InputDelegate.initialize();
+        handleNextGame = nextGame;
+        onFinish = finish;
+    }
+
+    function onSelect(item) {
+        var id = item.getId();
+        if (id == :player_1) {
+            Toybox.System.println("Player one should be chosen here");
+            handleNextGame.invoke(:player_1);
+        } else if (id == :finish) {
+            onFinish.invoke();
+        } else {
+            handleNextGame.invoke(:player_2);
+        }
     }
 }

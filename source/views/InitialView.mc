@@ -76,6 +76,9 @@ class InitialView extends Ui.View {
     dc.drawText(width / 2, height - ((height * 0.25)), Gfx.FONT_TINY,
                 dots + typeLabel + dots, Gfx.TEXT_JUSTIFY_CENTER);
 
+    dc.drawText(width / 2, height - dc.getFontHeight(Gfx.FONT_XTINY), Gfx.FONT_XTINY,
+                "v" + AppState.version, Gfx.TEXT_JUSTIFY_CENTER);
+
     // Center opponent part
     dc.setColor((backgroundColor == Gfx.COLOR_BLACK) ? Gfx.COLOR_WHITE
                                                      : Gfx.COLOR_BLACK,

@@ -6,10 +6,9 @@
     <setting propertyKey="@Properties.points_to_play" title="@Strings.settings_maximum_number_of_points">
       <settingConfig type="numeric" required="true" />
     </setting>
-    <!-- 
     <setting propertyKey="@Properties.games_to_play" title="@Strings.settings_maximum_number_of_games">
       <settingConfig type="numeric" required="true" />
-    </setting> -->
+    </setting>
     <setting propertyKey="@Properties.match_type" title="@Strings.settings_match_type">
       <settingConfig type="list" required="true">
         <listEntry value="0">@Strings.Singles</listEntry>
@@ -37,6 +36,9 @@
       <settingConfig type="boolean" required="true" />
     </setting>
     <setting propertyKey="@Properties.switchable_bottom_info" title="@Strings.settings_switchable_bottom_info_title">
+      <settingConfig type="boolean" required="true" />
+    </setting>
+    <setting propertyKey="@Properties.use_vibration" title="@Strings.settings_use_vibration_title">
       <settingConfig type="boolean" required="true" />
     </setting>
   </settings>

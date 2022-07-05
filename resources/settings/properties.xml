@@ -8,5 +8,7 @@
     <property id="show_clock" type="boolean">true</property>
     <property id="switchable_bottom_info" type="boolean">true</property>
     <property id="accent_color" type="number">0xFF5500</property>
+    <property id="use_vibration" type="boolean">true</property>
+    <property id="version" type="string">1.0.8</property>
   </properties>
 </resources>
